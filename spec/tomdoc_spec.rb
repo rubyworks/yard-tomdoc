@@ -1,4 +1,3 @@
-require 'yard'
 require File.dirname(__FILE__) + "/../lib/yard-tomdoc"
 
 describe YARD::Docstring do
