@@ -26,5 +26,7 @@ and TomDoc syntax at http://gnuu.org/2010/05/12/whats-missing-from-tomdoc/.
 Licensing
 ---------
 
-See the `TOMDOC_LICENSE` file for license information on TomDoc.
+Copyright (c) 2010 Loren Segal
+
+See the `NOTICE` file for license information on TomDoc.
 
