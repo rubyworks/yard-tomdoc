@@ -1,13 +1,25 @@
+require 'yard'
+
 module TomDoc
   class InvalidTomDoc < RuntimeError
+    # Create new InvalidTomDoc object.
+    #
+    # doc - document string
+    #
     def initialize(doc)
       @doc = doc
     end
 
+    # Provide access to document string.
+    #
+    # Returns String.
     def message
       @doc
     end
 
+    # Provide access to document string.
+    #
+    # Returns String.
     def to_s
       @doc
     end
@@ -16,11 +28,19 @@ module TomDoc
   class Arg
     attr_accessor :name, :description
 
+    # Create new Arg object.
+    #
+    # name        - name of argument
+    # description - arguments description
+    #
     def initialize(name, description = '')
       @name = name.to_s.intern
       @description = description
     end
 
+    # Is this an optional argument?
+    #
+    # Returns Boolean.
     def optional?
       @description.downcase.include? 'optional'
     end
@@ -74,6 +94,8 @@ module TomDoc
     def args
       args = []
       last_indent = nil
+
+      return args unless sections[1]
 
       sections[1].split("\n").each do |line|
         next if line.strip.empty?

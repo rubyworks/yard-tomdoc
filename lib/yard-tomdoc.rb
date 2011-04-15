@@ -1,7 +1,13 @@
-require File.dirname(__FILE__) + "/tomdoc"
+require File.dirname(__FILE__) + "/yard-tomdoc/tomdoc"
+#require 'tomdoc'
 
 module YARD
   class Docstring
+    # Parse comments with TomDoc and then provide YARD with results. 
+    #
+    # comments - comment String
+    #
+    # Returns a String of parsed comments description.
     def parse_comments(comments)
       tomdoc = TomDoc::TomDoc.new(comments)
       tomdoc.examples.each {|ex| create_tag(:example, "\n" + ex) }
@@ -12,3 +18,4 @@ module YARD
     end
   end
 end
+
