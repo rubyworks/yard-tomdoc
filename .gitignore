@@ -1,1 +1,9 @@
+.yardoc
+log
 pkg
+tmp
+example/doc
+example/.yardoc
+site/docs
+site/readme.html
+
