@@ -1,4 +1,4 @@
-require 'yard'
+#require 'yard'
 
 module TomDoc
   class InvalidTomDoc < RuntimeError

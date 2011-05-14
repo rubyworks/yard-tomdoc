@@ -1,21 +1,40 @@
 require File.dirname(__FILE__) + "/yard-tomdoc/tomdoc"
-#require 'tomdoc'
+#require 'tomdoc/tomdoc'
 
 module YARD
+
   class Docstring
+
     # Parse comments with TomDoc and then provide YARD with results. 
     #
     # comments - comment String
     #
     # Returns a String of parsed comments description.
-    def parse_comments(comments)
-      tomdoc = TomDoc::TomDoc.new(comments)
+    def parse_comments(comment)
+      tomdoc = TomDoc::TomDoc.new(comment)
+
       tomdoc.examples.each {|ex| create_tag(:example, "\n" + ex) }
+
       tomdoc.args.each {|arg| create_tag(:param, "#{arg.name} #{arg.description}") }
+
       tomdoc.raises.each {|r| create_tag(:raise, r.sub(/\ARaises\s+/, '')) }
-      tomdoc.returns.each {|r| create_tag(:return, r.sub(/\AReturns\s+/, '')) }
-      tomdoc.description
+
+      tomdoc.returns.each { |r|
+        if md = /\AReturns\s+([A-Z]*.?)\s+/.match(r)
+          klass = md[1]
+          desc  = md.post_match
+          create_tag(:return, "[#{klass}] #{desc}")
+        else
+          desc = r.sub(/\AReturns\s+/, '')
+          create_tag(:return, desc)
+        end
+      }
+
+      # notice we return the modified comment
+      tomdoc.description.to_s
     end
+
   end
+
 end
 
