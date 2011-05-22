@@ -77,6 +77,7 @@ files:
 - lib/yard-tomdoc/tomdoc.rb
 - lib/yard-tomdoc.rb
 - test/case_docstring.rb
+- HISTORY.md
 - README.md
 - VERSION
 - MIT.txt
