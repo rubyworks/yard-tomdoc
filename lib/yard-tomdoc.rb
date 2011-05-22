@@ -1,5 +1,5 @@
-#require File.dirname(__FILE__) + "/yard-tomdoc/tomdoc"  #require 'tomdoc/tomdoc'
-require 'tomdoc/tomdoc'
+#require 'tomdoc/tomdoc'
+require 'yard-tomdoc/tomdoc'
 
 module YARD
 
