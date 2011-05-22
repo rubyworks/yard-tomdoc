@@ -4,6 +4,7 @@ pkg
 tmp
 example/doc
 example/.yardoc
-site/docs
+site/doc
+site/qed
 site/readme.html
 

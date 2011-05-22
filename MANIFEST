@@ -1,0 +1,11 @@
+#!mast lib test [A-Z]*
+lib/.yardoc/checksums
+lib/.yardoc/objects/root.dat
+lib/.yardoc/proxy_types
+lib/yard-tomdoc/tomdoc.rb
+lib/yard-tomdoc.rb
+test/case_docstring.rb
+README.md
+VERSION
+MIT.txt
+NOTICE.md

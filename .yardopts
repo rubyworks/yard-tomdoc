@@ -1,0 +1,6 @@
+--title "YARD-TomDoc"
+--readme README.md
+--output-dir site/doc
+--private
+lib/**/*.rb -
+[A-Z][A-Z]*

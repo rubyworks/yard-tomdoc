@@ -19,25 +19,17 @@ stats:
   output   : ~
   active   : true
 
-rdoc:
-  service : rdoc
-  format  : redfish
-  exclude : [Redfile, Profile, MANIFEST, Version]
-  output  : site/docs/api
-  active  : false
-
-ri:
-  service: RI
-  include: ~
-  exclude: ~
-  output : ri
-  active : true
+yard:
+  service : Custom
+  track   : site
+  document: |
+    system "yard"
 
 qedoc:
   service: custom
   cycle: main
   document: |
-    puts `qedoc -o site/docs/qed -t "<%= title %>" qed`
+    puts `qedoc -o site/qed -t "<%= title %>" qed`
   active: false
 
 testrb:
