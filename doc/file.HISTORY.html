@@ -43,11 +43,26 @@
     
     <div id="content"><div id='filecontents'><h1>RELEASE HISTORY</h1>
 
+<h2>0.2.1 | 2011-05-23</h2>
+
+<p>There is an as-of-yet undetermined issue with running yard-tomdoc under
+Ruby 1.9. By depending on an internal copy of TomDoc's TomDoc class we
+are able to avoid the problem. So, for now we are removing the dependency
+on the <code>tomdoc</code> gem until this is fully resolved.</p>
+
+<p>Changes:</p>
+
+<ul>
+<li>Remove dependency on tomdoc.</li>
+<li>Require internal copy of tomdoc/tomdoc.rb.</li>
+</ul>
+
+
 <h2>0.2.0 | 2011-05-22</h2>
 
-<p>This is first packaged release of YARD-TomDoc. Some minor
-improvements have been made from the original version and
-the project now actually depends on the <code>tomdoc</code> library.</p>
+<p>This is first packaged release of YARD-TomDoc. Some minor improvements
+have been made from the original version and the project now actually
+depends on the <code>tomdoc</code> library.</p>
 
 <p>Changes:</p>
 
@@ -60,7 +75,7 @@ the project now actually depends on the <code>tomdoc</code> library.</p>
 </div></div>
     
     <div id="footer">
-  Generated on Sun May 22 13:47:33 2011 by 
+  Generated on Sun May 22 14:55:12 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.7 (ruby-1.8.7).
 </div>
