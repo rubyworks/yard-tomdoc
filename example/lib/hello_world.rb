@@ -1,11 +1,11 @@
-# This is a class.
+# This is your typical "hello world" class.
 class HelloWorld
 
   # Hello simply prints out a greeting.
   #
   # string - Object that responds to #to_s.
   #
-  # Return nothing.
+  # Returns nothing.
   def hello(string="World")
     puts "Hello #{string}"
   end
