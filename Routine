@@ -49,9 +49,6 @@ grancher:
   #  - [doc/rdoc, rdoc]
   #  - [doc/qedoc, qedoc]
 
-gemcutter:
-  active: true
-
 email:
   service : Email
   file    : ~

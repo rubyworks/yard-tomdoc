@@ -1,5 +1,16 @@
 # RELEASE HISTORY
 
+## 0.3.0 | 2011-06-08
+
+Okay,looks like tomdoc is ready to handle the dependency. If there
+are any problems wit this there is a fallback plugin, `tomdoc-intern`.
+
+Changes:
+
+* Depend on tomdoc proper.
+* Add fallback `yard-tomdoc-intern.rb`
+
+
 ## 0.2.1 | 2011-05-23
 
 There is an as-of-yet undetermined issue with running yard-tomdoc under

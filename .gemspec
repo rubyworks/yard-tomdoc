@@ -1,13 +1,8 @@
 --- !ruby/object:Gem::Specification 
 name: yard-tomdoc
 version: !ruby/object:Gem::Version 
-  hash: 21
   prerelease: 
-  segments: 
-  - 0
-  - 2
-  - 1
-  version: 0.2.1
+  version: 0.3.0
 platform: ruby
 authors: 
 - Loren Segal
@@ -16,7 +11,7 @@ autorequire:
 bindir: bin
 cert_chain: []
 
-date: 2011-05-24 00:00:00 Z
+date: 2011-06-08 00:00:00 Z
 dependencies: 
 - !ruby/object:Gem::Dependency 
   name: ko
@@ -26,9 +21,6 @@ dependencies:
     requirements: 
     - - ">="
       - !ruby/object:Gem::Version 
-        hash: 3
-        segments: 
-        - 0
         version: "0"
   type: :development
   version_requirements: *id001
@@ -40,9 +32,6 @@ dependencies:
     requirements: 
     - - ">="
       - !ruby/object:Gem::Version 
-        hash: 3
-        segments: 
-        - 0
         version: "0"
   type: :development
   version_requirements: *id002
@@ -55,12 +44,14 @@ extensions: []
 extra_rdoc_files: 
 - README.md
 files: 
+- lib/yard-tomdoc/arg.rb
 - lib/yard-tomdoc/tomdoc.rb
+- lib/yard-tomdoc/yard.rb
+- lib/yard-tomdoc-intern.rb
 - lib/yard-tomdoc.rb
-- test/case_docstring.rb
+- test/test_docstring.rb
 - HISTORY.md
 - README.md
-- Version
 - MIT.txt
 - NOTICE.md
 homepage: http://rubyworks.github.com/yard-tomdoc
@@ -79,18 +70,12 @@ required_ruby_version: !ruby/object:Gem::Requirement
   requirements: 
   - - ">="
     - !ruby/object:Gem::Version 
-      hash: 3
-      segments: 
-      - 0
       version: "0"
 required_rubygems_version: !ruby/object:Gem::Requirement 
   none: false
   requirements: 
   - - ">="
     - !ruby/object:Gem::Version 
-      hash: 3
-      segments: 
-      - 0
       version: "0"
 requirements: []
 

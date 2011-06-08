@@ -1,0 +1,11 @@
+#!mast lib test [A-Z][A-Z]*
+lib/yard-tomdoc/arg.rb
+lib/yard-tomdoc/tomdoc.rb
+lib/yard-tomdoc/yard.rb
+lib/yard-tomdoc-intern.rb
+lib/yard-tomdoc.rb
+test/test_docstring.rb
+HISTORY.md
+README.md
+MIT.txt
+NOTICE.md
