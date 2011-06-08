@@ -4,6 +4,8 @@ require 'minitest/autorun'
 
 require "yard"
 require "yard-tomdoc"
+
+# TODO: make separate test for this
 #require "yard-tomdoc-intern"
 
 describe YARD::Docstring do
