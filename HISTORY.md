@@ -3,7 +3,7 @@
 ## 0.3.0 | 2011-06-08
 
 Okay,looks like tomdoc is ready to handle the dependency. If there
-are any problems wit this there is a fallback plugin, `tomdoc-intern`.
+are any problems with this there is a fallback plugin, `tomdoc-intern`.
 
 Changes:
 
