@@ -74,7 +74,7 @@
   
   
     <dt class="r2 last">Defined in:</dt>
-    <dd class="r2 last">lib/yard-tomdoc/tomdoc.rb</dd>
+    <dd class="r2 last">lib/yard-tomdoc/arg.rb</dd>
   
 </dl>
 <div class="clear"></div>
@@ -213,26 +213,62 @@
     
 <p>Create new Arg object.</p>
 
-<p>name        - name of argument description - arguments description</p>
-
 
   </div>
 </div>
 <div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
   
+    <li>
+      
+        <span class='type'></span>
+      
+      
+        <span class='name'>name</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>name of argument</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'></span>
+      
+      
+        <span class='name'>description</span>
+      
+      
+        <em class="default">(defaults to: <tt>''</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>arguments description</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-36
-37
-38
-39</pre>
+10
+11
+12
+13</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/arg.rb', line 10</span>
 
 <span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='name identifier id'>name</span><span class='comma token'>,</span> <span class='description identifier id'>description</span> <span class='assign token'>=</span> <span class='string val'>''</span><span class='rparen token'>)</span>
   <span class='@name ivar id'>@name</span> <span class='assign token'>=</span> <span class='name identifier id'>name</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='dot token'>.</span><span class='intern identifier id'>intern</span>
@@ -268,19 +304,37 @@
   </div>
 </div>
 <div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
   
+    <li>
+      
+        <span class='type'></span>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>the value of attribute description</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-29
-30
-31</pre>
+3
+4
+5</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 29</span>
+      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/arg.rb', line 3</span>
 
 <span class='def def kw'>def</span> <span class='description identifier id'>description</span>
   <span class='@description ivar id'>@description</span>
@@ -310,19 +364,37 @@
   </div>
 </div>
 <div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
   
+    <li>
+      
+        <span class='type'></span>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>the value of attribute name</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-29
-30
-31</pre>
+3
+4
+5</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 29</span>
+      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/arg.rb', line 3</span>
 
 <span class='def def kw'>def</span> <span class='name identifier id'>name</span>
   <span class='@name ivar id'>@name</span>
@@ -352,8 +424,6 @@
     
 <p>Is this an optional argument?</p>
 
-<p>Returns Boolean.</p>
-
 
   </div>
 </div>
@@ -368,6 +438,11 @@
       
       
       
+        &mdash;
+        <div class='inline'>
+<p>Boolean.</p>
+</div>
+      
     </li>
   
 </ul>
@@ -378,12 +453,12 @@
       <pre class="lines">
 
 
-44
-45
-46</pre>
+18
+19
+20</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 44</span>
+      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/arg.rb', line 18</span>
 
 <span class='def def kw'>def</span> <span class='optional? fid id'>optional?</span>
   <span class='@description ivar id'>@description</span><span class='dot token'>.</span><span class='downcase identifier id'>downcase</span><span class='dot token'>.</span><span class='include? fid id'>include?</span> <span class='string val'>'optional'</span>
@@ -399,7 +474,7 @@
 </div>
     
     <div id="footer">
-  Generated on Sun May 22 16:08:27 2011 by 
+  Generated on Wed Jun  8 14:38:13 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.7 (ruby-1.8.7).
 </div>

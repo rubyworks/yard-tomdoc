@@ -79,7 +79,17 @@
 </dl>
 <div class="clear"></div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Model a TomDoc comment.</p>
 
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>
 
   <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
   <ul class="summary">
@@ -137,7 +147,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns [Boolean] true if valid TomDoc comment.</p>
+</div></span>
   
 </li>
 
@@ -154,7 +166,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#args-instance_method" title="#args (instance method)">- (Object) <strong>args</strong> </a>
+      <a href="#args-instance_method" title="#args (instance method)">- (Array) <strong>args</strong> </a>
     
 
     
@@ -167,7 +179,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns [Array] list of arguments.</p>
+</div></span>
   
 </li>
 
@@ -175,7 +189,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#description-instance_method" title="#description (instance method)">- (Object) <strong>description</strong> </a>
+      <a href="#description-instance_method" title="#description (instance method)">- (String) <strong>description</strong> </a>
     
 
     
@@ -188,7 +202,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns [String] first section.</p>
+</div></span>
   
 </li>
 
@@ -196,7 +212,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#examples-instance_method" title="#examples (instance method)">- (Object) <strong>examples</strong> </a>
+      <a href="#examples-instance_method" title="#examples (instance method)">- (Array) <strong>examples</strong> </a>
     
 
     
@@ -209,7 +225,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns [Array] list of examples.</p>
+</div></span>
   
 </li>
 
@@ -242,7 +260,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#raises-instance_method" title="#raises (instance method)">- (Object) <strong>raises</strong> </a>
+      <a href="#raises-instance_method" title="#raises (instance method)">- (Array) <strong>raises</strong> </a>
     
 
     
@@ -255,7 +273,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns [Array] list of possible errors that could be raised.</p>
+</div></span>
   
 </li>
 
@@ -263,7 +283,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#returns-instance_method" title="#returns (instance method)">- (Object) <strong>returns</strong> </a>
+      <a href="#returns-instance_method" title="#returns (instance method)">- (Array) <strong>returns</strong> </a>
     
 
     
@@ -276,7 +296,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns [Array] list of possible returns.</p>
+</div></span>
   
 </li>
 
@@ -284,7 +306,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#sections-instance_method" title="#sections (instance method)">- (Object) <strong>sections</strong> </a>
+      <a href="#sections-instance_method" title="#sections (instance method)">- (Array) <strong>sections</strong> </a>
     
 
     
@@ -297,7 +319,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns [Array] document split into sections.</p>
+</div></span>
   
 </li>
 
@@ -305,7 +329,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#to_s-instance_method" title="#to_s (instance method)">- (Object) <strong>to_s</strong> </a>
+      <a href="#to_s-instance_method" title="#to_s (instance method)">- (String) <strong>to_s</strong> </a>
     
 
     
@@ -318,7 +342,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns [String] raw comment text.</p>
+</div></span>
   
 </li>
 
@@ -326,7 +352,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#tomdoc-instance_method" title="#tomdoc (instance method)">- (Object) <strong>tomdoc</strong> </a>
+      <a href="#tomdoc-instance_method" title="#tomdoc (instance method)">- (String) <strong>tomdoc</strong> </a>
     
 
     
@@ -339,7 +365,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns [String] cleansed comment text.</p>
+</div></span>
   
 </li>
 
@@ -360,7 +388,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns [Boolean] true if valid TomDoc comment, otherwise false.</p>
+</div></span>
   
 </li>
 
@@ -368,7 +398,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#validate-instance_method" title="#validate (instance method)">- (Object) <strong>validate</strong> </a>
+      <a href="#validate-instance_method" title="#validate (instance method)">- (Boolean) <strong>validate</strong> </a>
     
 
     
@@ -381,7 +411,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>Returns [Boolean] true if validation doesn’t raise an error.</p>
+</div></span>
   
 </li>
 
@@ -415,12 +447,12 @@
       <pre class="lines">
 
 
-52
-53
-54</pre>
+39
+40
+41</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 39</span>
 
 <span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='text identifier id'>text</span><span class='rparen token'>)</span>
   <span class='@raw ivar id'>@raw</span> <span class='assign token'>=</span> <span class='text identifier id'>text</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='dot token'>.</span><span class='strip identifier id'>strip</span>
@@ -455,19 +487,37 @@
   </div>
 </div>
 <div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
   
+    <li>
+      
+        <span class='type'></span>
+      
+      
+      
+      
+        
+        <div class='inline'>
+<p>the value of attribute raw</p>
+</div>
+      
+    </li>
+  
+</ul>
+
 </div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-50
-51
-52</pre>
+37
+38
+39</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 50</span>
+      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 37</span>
 
 <span class='def def kw'>def</span> <span class='raw identifier id'>raw</span>
   <span class='@raw ivar id'>@raw</span>
@@ -495,6 +545,8 @@
 </p><div class="docstring">
   <div class="discussion">
     
+<p>Returns [Boolean] true if valid TomDoc comment.</p>
+
 
   </div>
 </div>
@@ -509,6 +561,11 @@
       
       
       
+        &mdash;
+        <div class='inline'>
+<p>true if valid TomDoc comment.</p>
+</div>
+      
     </li>
   
 </ul>
@@ -519,12 +576,12 @@
       <pre class="lines">
 
 
-60
-61
-62</pre>
+49
+50
+51</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 49</span>
 
 <span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='valid? fid id'>valid?</span><span class='lparen token'>(</span><span class='text identifier id'>text</span><span class='rparen token'>)</span>
   <span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='text identifier id'>text</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='valid? fid id'>valid?</span>
@@ -544,16 +601,45 @@
       <div class="method_details first">
   <p class="signature first" id="args-instance_method">
   
-    - (<tt>Object</tt>) <strong>args</strong> 
+    - (<tt>Array</tt>) <strong>args</strong> 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns [Array] list of arguments.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>list of arguments.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+93
 94
 95
 96
@@ -574,11 +660,10 @@
 111
 112
 113
-114
-115</pre>
+114</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 94</span>
+      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 93</span>
 
 <span class='def def kw'>def</span> <span class='args identifier id'>args</span>
   <span class='args identifier id'>args</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
@@ -611,22 +696,50 @@
       <div class="method_details ">
   <p class="signature " id="description-instance_method">
   
-    - (<tt>Object</tt>) <strong>description</strong> 
+    - (<tt>String</tt>) <strong>description</strong> 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns [String] first section.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>first section.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-90
-91
-92</pre>
+88
+89
+90</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 90</span>
+      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 88</span>
 
 <span class='def def kw'>def</span> <span class='description identifier id'>description</span>
   <span class='sections identifier id'>sections</span><span class='dot token'>.</span><span class='first identifier id'>first</span>
@@ -640,11 +753,39 @@
       <div class="method_details ">
   <p class="signature " id="examples-instance_method">
   
-    - (<tt>Object</tt>) <strong>examples</strong> 
+    - (<tt>Array</tt>) <strong>examples</strong> 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns [Array] list of examples.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>list of examples.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -677,18 +818,44 @@
       <div class="method_details ">
   <p class="signature " id="raises-instance_method">
   
-    - (<tt>Object</tt>) <strong>raises</strong> 
+    - (<tt>Array</tt>) <strong>raises</strong> 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns [Array] list of possible errors that could be raised.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>list of possible errors that could be raised.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-145
-146
 147
 148
 149
@@ -704,10 +871,12 @@
 159
 160
 161
-162</pre>
+162
+163
+164</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 145</span>
+      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 147</span>
 
 <span class='def def kw'>def</span> <span class='raises identifier id'>raises</span>
   <span class='if if kw'>if</span> <span class='tomdoc identifier id'>tomdoc</span> <span class='match op'>=~</span> <span class='regexp val'>/^\s*(Raises.+)/</span><span class='m identifier id'>m</span>
@@ -736,17 +905,44 @@
       <div class="method_details ">
   <p class="signature " id="returns-instance_method">
   
-    - (<tt>Object</tt>) <strong>returns</strong> 
+    - (<tt>Array</tt>) <strong>returns</strong> 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns [Array] list of possible returns.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>list of possible returns.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-125
 126
 127
 128
@@ -764,10 +960,11 @@
 140
 141
 142
-143</pre>
+143
+144</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 125</span>
+      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 126</span>
 
 <span class='def def kw'>def</span> <span class='returns identifier id'>returns</span>
   <span class='if if kw'>if</span> <span class='tomdoc identifier id'>tomdoc</span> <span class='match op'>=~</span> <span class='regexp val'>/^\s*(Returns.+)/</span><span class='m identifier id'>m</span>
@@ -797,22 +994,50 @@
       <div class="method_details ">
   <p class="signature " id="sections-instance_method">
   
-    - (<tt>Object</tt>) <strong>sections</strong> 
+    - (<tt>Array</tt>) <strong>sections</strong> 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns [Array] document split into sections.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>document split into sections.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-86
-87
-88</pre>
+83
+84
+85</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 86</span>
+      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 83</span>
 
 <span class='def def kw'>def</span> <span class='sections identifier id'>sections</span>
   <span class='tomdoc identifier id'>tomdoc</span><span class='dot token'>.</span><span class='split identifier id'>split</span><span class='lparen token'>(</span><span class='string val'>&quot;\n\n&quot;</span><span class='rparen token'>)</span>
@@ -826,22 +1051,50 @@
       <div class="method_details ">
   <p class="signature " id="to_s-instance_method">
   
-    - (<tt>Object</tt>) <strong>to_s</strong> 
+    - (<tt>String</tt>) <strong>to_s</strong> 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns [String] raw comment text.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>raw comment text.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-56
-57
-58</pre>
+44
+45
+46</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 44</span>
 
 <span class='def def kw'>def</span> <span class='to_s identifier id'>to_s</span>
   <span class='@raw ivar id'>@raw</span>
@@ -855,25 +1108,61 @@
       <div class="method_details ">
   <p class="signature " id="tomdoc-instance_method">
   
-    - (<tt>Object</tt>) <strong>tomdoc</strong> 
+    - (<tt>String</tt>) <strong>tomdoc</strong> 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns [String] cleansed comment text.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>cleansed comment text.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-82
-83
-84</pre>
+74
+75
+76
+77
+78
+79
+80</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 82</span>
+      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 74</span>
 
 <span class='def def kw'>def</span> <span class='tomdoc identifier id'>tomdoc</span>
   <span class='raw identifier id'>raw</span>
+  <span class='comment val'>#clean = raw.split(&quot;\n&quot;).map do |line|</span>
+  <span class='comment val'>#  line =~ /^(\s*# ?)/ ? line.sub($1, '') : line</span>
+  <span class='comment val'>#end.compact.join(&quot;\n&quot;)</span>
+  <span class='comment val'>#clean</span>
 <span class='end end kw'>end</span>
 </pre>
     </td>
@@ -891,6 +1180,8 @@
 </p><div class="docstring">
   <div class="discussion">
     
+<p>Returns [Boolean] true if valid TomDoc comment, otherwise false.</p>
+
 
   </div>
 </div>
@@ -905,6 +1196,11 @@
       
       
       
+        &mdash;
+        <div class='inline'>
+<p>true if valid TomDoc comment, otherwise false.</p>
+</div>
+      
     </li>
   
 </ul>
@@ -915,14 +1211,14 @@
       <pre class="lines">
 
 
-64
-65
-66
-67
-68</pre>
+54
+55
+56
+57
+58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 64</span>
+      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 54</span>
 
 <span class='def def kw'>def</span> <span class='valid? fid id'>valid?</span>
   <span class='validate identifier id'>validate</span>
@@ -938,30 +1234,58 @@
       <div class="method_details ">
   <p class="signature " id="validate-instance_method">
   
-    - (<tt>Object</tt>) <strong>validate</strong> 
+    - (<tt>Boolean</tt>) <strong>validate</strong> 
   
 
   
-</p><table class="source_code">
+</p><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns [Boolean] true if validation doesn’t raise an error.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>true if validation doesn’t raise an error.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
+61
+62
+63
+64
+65
+66
+67
+68
+69
 70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80</pre>
+71</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 70</span>
+      <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/tomdoc.rb', line 61</span>
 
 <span class='def def kw'>def</span> <span class='validate identifier id'>validate</span>
   <span class='if if kw'>if</span> <span class='notop op'>!</span><span class='raw identifier id'>raw</span><span class='dot token'>.</span><span class='include? fid id'>include?</span><span class='lparen token'>(</span><span class='string val'>'Returns'</span><span class='rparen token'>)</span>
@@ -985,7 +1309,7 @@
 </div>
     
     <div id="footer">
-  Generated on Sun May 22 16:08:27 2011 by 
+  Generated on Wed Jun  8 14:38:14 2011 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.6.7 (ruby-1.8.7).
 </div>
