@@ -1,5 +1,10 @@
 # yard-tomdoc
 
+| Author:    | Thomas Sawyer <transfire@gmail.com>            |
+| Copyright: | (c) 2010 Loren Segal, Thaomas Sawyer           |
+| Home:      | http://rubyworks.github.com/yard-tomdoc        |
+| Issues:    | http://github.com/rubyworks/yard-tomdoc/issues |
+
 
 ## Description
 
