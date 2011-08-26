@@ -1,8 +1,8 @@
 # yard-tomdoc
 
-| Author:    | Thomas Sawyer <transfire@gmail.com>            |
+| Author:    | Thomas Sawyer &lt;transfire@gmail.com&gt;      |
 |------------|------------------------------------------------|
-| Copyright: | (c) 2010 Loren Segal, Thaomas Sawyer           |
+| Copyright: | (c) 2010 Loren Segal, Thomas Sawyer            |
 | Home:      | http://rubyworks.github.com/yard-tomdoc        |
 | Issues:    | http://github.com/rubyworks/yard-tomdoc/issues |
 
