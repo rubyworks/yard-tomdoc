@@ -3,27 +3,27 @@ $:.unshift File.expand_path(File.dirname(__FILE__)) + "/../lib"
 require 'minitest/autorun'
 
 require "yard"
-require "yard-tomdoc"
+#require "yard-tomdoc"
 
 # TODO: make separate test for this
-#require "yard-tomdoc-intern"
+require "yard-tomdoc-intern"
 
 describe YARD::Docstring do
 
   before do
     @docstring = YARD::Docstring.new <<-eof
-Duplicate some text an arbitrary number of times.
-
-text  - The String to be duplicated.
-count - The Integer number of times to duplicate the text.
-
-Examples
-  multiplex('Tom', 4)
-  # => 'TomTomTomTom'
-
-Returns the duplicated String.
-
-Raises ArgumentError if something bad happened
+# Duplicate some text an arbitrary number of times.
+# 
+# text  - The String to be duplicated.
+# count - The Integer number of times to duplicate the text.
+# 
+# Examples
+#   multiplex('Tom', 4)
+#   # => 'TomTomTomTom'
+#
+# Returns the duplicated String.
+#
+# Raises ArgumentError if something bad happened
 eof
   end
 

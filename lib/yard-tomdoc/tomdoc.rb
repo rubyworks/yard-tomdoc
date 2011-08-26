@@ -72,11 +72,11 @@ module TomDoc
 
     # Returns [String] cleansed comment text.
     def tomdoc
-      raw
-      #clean = raw.split("\n").map do |line|
-      #  line =~ /^(\s*# ?)/ ? line.sub($1, '') : line
-      #end.compact.join("\n")
-      #clean
+      #raw
+      clean = raw.split("\n").map do |line|
+        line =~ /^(\s*# ?)/ ? line.sub($1, '') : nil
+      end.compact.join("\n")
+      clean
     end
 
     # Returns [Array] document split into sections.
