@@ -11,6 +11,7 @@ copyrights:
 replacements: []
 alternatives: []
 requirements:
+- name: yard
 - name: detroit
   groups:
   - build
