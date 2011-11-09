@@ -1,13 +1,15 @@
 # RELEASE HISTORY
 
+
 ## 0.3.1 | 2011-11-10
 
-NOT YET RELEASED
-This release modernizes the build configuration.
+This release simply modernizes the build configuration
+and adds an systems test. Functionally it has not changed.
 
 Changes:
 
 * Modernize the build configuration.
+* Add systems test and integrate Travis CI.
 
 
 ## 0.3.0 | 2011-06-08

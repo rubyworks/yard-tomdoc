@@ -5,17 +5,13 @@ email:
     - ruby-talk@ruby-lang.org
 
 gem:
-  active : true
+  active: true
 
 github:
-  gn_pages: pages
+  gh_pages: pages
 
 yard:
   active: true
-
-qedoc:
-  output:
-    - QED.rdoc
 
 dnote:
   output: log/Notes.rdoc

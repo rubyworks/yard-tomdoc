@@ -2,8 +2,9 @@
 source:
 - Profile
 authors:
+- name: Thomas Sawyer
+  email: transfire@gmail.com
 - name: Loren Segal
-- name: Thomas Sawyer <transfire@gmail.com
 copyrights:
 - holder: Loren Segal
   year: '2010'
@@ -39,4 +40,5 @@ name: yad-tomdoc
 title: YARD TomDoc
 version: 0.3.1
 summary: TomDoc for YARD
+description: Use TomDoc documentation format with YARD.
 date: '2011-11-09'

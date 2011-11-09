@@ -1,7 +1,8 @@
 --title "YARD-TomDoc"
 --readme README.md
---output-dir site/doc
+--protected
 --private
 --plugin tomdoc
-lib/**/*.rb -
-[A-Z][A-Z]*
+lib 
+-
+[A-Z]*.*

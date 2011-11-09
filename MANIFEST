@@ -5,7 +5,11 @@ lib/yard-tomdoc/version.rb
 lib/yard-tomdoc/yard.rb
 lib/yard-tomdoc-intern.rb
 lib/yard-tomdoc.rb
-test/test_docstring.rb
+test/helper.rb
+test/system/sample/lib/example.rb
+test/system/sample/lib/hello_world.rb
+test/system/test_yardoc.rb
+test/unit/test_docstring.rb
 HISTORY.md
 README.md
 MIT.txt
