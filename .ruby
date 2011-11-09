@@ -11,13 +11,17 @@ copyrights:
 replacements: []
 alternatives: []
 requirements:
-- name: minitest
-  groups:
-  - test
-  development: true
 - name: detroit
   groups:
   - build
+  development: true
+- name: rake
+  groups:
+  - test
+  development: true
+- name: minitest
+  groups:
+  - test
   development: true
 dependencies: []
 conflicts: []

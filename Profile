@@ -13,8 +13,9 @@ authors [
 ]
 
 requirements [
+  'detroit  (build)',
+  'rake     (test)',
   'minitest (test)',
-  'detroit (build)'
   #'tomdoc 0.2.0+'
 ]
 
