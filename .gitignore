@@ -1,8 +1,7 @@
 .reap/digest
 .yardoc
+doc
 log
 pkg
 tmp
-example/doc
-example/.yardoc
 pages
