@@ -1,5 +1,15 @@
 # RELEASE HISTORY
 
+## 0.3.1 | 2011-11-10
+
+NOT YET RELEASED
+This release modernizes the build configuration.
+
+Changes:
+
+* Modernize the build configuration.
+
+
 ## 0.3.0 | 2011-06-08
 
 Okay,looks like tomdoc is ready to handle the dependency. If there
