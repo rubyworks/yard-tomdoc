@@ -5,6 +5,7 @@
 | Copyright: | (c) 2010 Loren Segal, Thomas Sawyer            |
 | Home:      | http://rubyworks.github.com/yard-tomdoc        |
 | Issues:    | http://github.com/rubyworks/yard-tomdoc/issues |
+| Status:    | [![Build Status](https://secure.travis-ci.org/rubyworks/yard-tomdoc.png)](http://travis-ci.org/rubyworks/yard-tomdoc) |
 
 
 ## Description
