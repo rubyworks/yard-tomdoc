@@ -15,5 +15,9 @@ class Example
     "tartar"
   end
 
+  # This is a subexample.
+  class SubExample
+  end
+
 end
 
