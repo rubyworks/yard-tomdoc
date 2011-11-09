@@ -1,10 +1,8 @@
+.reap/digest
 .yardoc
 log
 pkg
 tmp
 example/doc
 example/.yardoc
-site/doc
-site/qed
-site/readme.html
-
+pages

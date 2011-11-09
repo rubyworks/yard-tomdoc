@@ -1,0 +1,30 @@
+#!/usr/bin/env ruby
+
+require File.dirname(__FILE__) + '/lib/yard-tomdoc/version'
+
+name    "yad-tomdoc"
+version YARD::TomDoc::VERSION
+title   "YARD TomDoc"
+summary "TomDoc for YARD"
+
+authors [
+  'Loren Segal',
+  'Thomas Sawyer <transfire@gmail.com' 
+]
+
+requirements [
+  'minitest (test)',
+  'detroit (build)'
+  #'tomdoc 0.2.0+'
+]
+
+resources(
+  'home' => 'http://rubyworks.github.com/yard-tomdoc',
+  'code' => 'http://github.com/rubyworks/yard-tomdoc',
+  'docs' => 'http://rubyworks.github.com/yard-tomdoc/doc'
+)
+
+copyrights [
+  '2010 Loren Segal (MIT)' 
+]
+

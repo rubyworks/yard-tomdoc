@@ -1,75 +1,28 @@
 ---
-gem:
-  service: Gem
-  active : true
-
-dnote:
-  service  : DNote
-  loadpath : ~
-  labels   : ~
-  output   : ~
-  format   : ~
-  active   : true
-
-stats:
-  service  : Stats
-  title    : ~
-  loadpath : ~
-  exclude  : ~
-  output   : ~
-  active   : true
-
-yard:
-  service : Custom
-  track   : site
-  document: |
-    system "yard"
-
-qedoc:
-  service: custom
-  cycle: main
-  document: |
-    puts `qedoc -o site/qed -t "<%= title %>" qed`
-  active: false
-
-testrb:
-  service  : testrb
-  tests    : ~
-  exclude  : ~
-  loadpath : ~
-  requires : ~
-  live     : false   
-  active   : false
-
-grancher:
-  service: Grancher
-  active: true
-  #sitemap:
-  #  - site
-  #  - [doc/rdoc, rdoc]
-  #  - [doc/qedoc, qedoc]
-
 email:
-  service : Email
-  file    : ~
-  subject : ~
-  mailto  : 
+  mailto: 
     - rubyworks-mailinglist@googlegroups.com
     - ruby-talk@ruby-lang.org
-#  from    : transfire@gmail.com
-#  server  : <%= ENV['EMAIL_SERVER'] %>
-#  port    : <%= ENV['EMAIL_PORT'] %>
-#  account : <%= ENV['EMAIL_ACCOUNT'] %>
-#  domain  : <%= ENV['EMAIL_DOMAIN'] %>
-#  login   : <%= ENV['EMAIL_LOGIN'] %>
-#  secure  : <%= ENV['EMAIL_SECURE'] %>
-  active  : true
+
+gem:
+  active : true
+
+github:
+  gn_pages: pages
+
+yard:
+  active: true
+
+qedoc:
+  output:
+    - QED.rdoc
+
+dnote:
+  output: log/Notes.rdoc
 
 vclog:
-  service  : VClog
-  format   : html   # xml, txt
-  layout   : rel    # gnu
-  typed    : false
-  output   : ~
-  active   : false
+  output:
+    - log/Changes.rdoc
+    - log/History.rdoc
+  active: false
 

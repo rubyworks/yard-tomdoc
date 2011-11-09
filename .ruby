@@ -1,40 +1,37 @@
---- 
-name: yard-tomdoc
-version: 0.3.0
-title: YARD-TomDoc
-summary: TomDoc for YARD
-description: Implements [TomDoc](http://tomdoc.org) syntax for YARD. 'Nuff said.
-loadpath: 
-- lib
-manifest: Manifest.txt
-requires: 
-- name: ko
-  version: 0+
-  group: 
+---
+source:
+- Profile
+authors:
+- name: Loren Segal
+- name: Thomas Sawyer <transfire@gmail.com
+copyrights:
+- holder: Loren Segal
+  year: '2010'
+  license: MIT
+replacements: []
+alternatives: []
+requirements:
+- name: minitest
+  groups:
   - test
-- name: redline
-  version: 0+
-  group: 
+  development: true
+- name: detroit
+  groups:
   - build
+  development: true
+dependencies: []
 conflicts: []
-
-replaces: []
-
-engine_check: []
-
-contact: trans <transfire@gmail.com>
-copyright: Copyright (c) 2010 Loren Segal, Thomas Sawyer
-licenses: 
-- MIT
-authors: 
-- Loren Segal
-- Thomas Sawyer
-maintainers: []
-
-resources: 
+repositories: []
+resources:
   home: http://rubyworks.github.com/yard-tomdoc
   code: http://github.com/rubyworks/yard-tomdoc
   docs: http://rubyworks.github.com/yard-tomdoc/doc
-repositories: {}
-
-spec_version: 1.0.0
+extra: {}
+load_path:
+- lib
+revision: 0
+name: yad-tomdoc
+title: YARD TomDoc
+version: 0.3.1
+summary: TomDoc for YARD
+date: '2011-11-09'
