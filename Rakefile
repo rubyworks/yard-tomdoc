@@ -12,3 +12,4 @@ task :turn do
   sh "turn -Ilib test/"
 end
 
+task :default => [:test]

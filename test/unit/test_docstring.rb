@@ -1,6 +1,4 @@
-$:.unshift File.expand_path(File.dirname(__FILE__)) + "/../lib"
-
-require 'minitest/autorun'
+require File.expand_path(File.dirname(__FILE__)) + "/../helper.rb"
 
 require "yard"
 #require "yard-tomdoc"
