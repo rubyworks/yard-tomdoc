@@ -8,17 +8,17 @@ gem:
   active: true
 
 github:
-  gh_pages: pages
+  gh_pages: web
 
 yard:
   active: true
 
 dnote:
-  output: log/Notes.rdoc
+  title: Source Notes
+  output: log/notes.html
 
 vclog:
   output:
-    - log/Changes.rdoc
-    - log/History.rdoc
-  active: false
+    - log/changes.html
+    - log/history.html
 
