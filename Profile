@@ -2,7 +2,7 @@
 
 require File.dirname(__FILE__) + '/lib/yard-tomdoc/version'
 
-name    "yad-tomdoc"
+name    "yard-tomdoc"
 version YARD::TomDoc::VERSION
 title   "YARD TomDoc"
 summary "TomDoc for YARD"
