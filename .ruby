@@ -36,9 +36,9 @@ extra: {}
 load_path:
 - lib
 revision: 0
-name: yad-tomdoc
+name: yard-tomdoc
 title: YARD TomDoc
 version: 0.3.1
 summary: TomDoc for YARD
 description: Use TomDoc documentation format with YARD.
-date: '2011-11-09'
+date: '2011-11-10'

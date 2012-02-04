@@ -12,5 +12,4 @@ test/system/test_yardoc.rb
 test/unit/test_docstring.rb
 HISTORY.md
 README.md
-MIT.txt
 NOTICE.md
