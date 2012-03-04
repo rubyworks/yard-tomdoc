@@ -32,13 +32,14 @@ module YARD
 
       tomdoc.arguments.each {|arg| create_tag(:param, "#{arg.name} #{arg.description}") }
 
-      last_argument = tomdoc.arguments.last
-      last_argument.options.each do |opt|
-        create_tag(:option, "#{last_argument.name} #{opt.description}")
+      if last_argument = tomdoc.arguments.last
+        last_argument.options.each do |opt|
+          create_tag(:option, "#{last_argument.name} #{opt.description}")
+        end
       end
 
       tomdoc.raises.each {|r| create_tag(:raise, r.sub(/\ARaises\s+/, '')) }
-
+#p tomdoc.returns
       tomdoc.returns.each do |r|
         if md = /\AReturns\s+([A-Z].*?)\s+/.match(r)
           klass = md[1]
