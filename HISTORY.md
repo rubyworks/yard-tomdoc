@@ -1,5 +1,19 @@
 # RELEASE HISTORY
 
+## 0.4.0  2012-03-04
+
+This major release now uses tomparse gem for parsing TomDoc,
+instead of the tomdoc gem. This library only handles parsing
+and non of the other features than the tomdoc gem provides,
+so it is more suited to yard-tomdoc's needs. In addition,
+support for the latest TomDoc specification are included in
+this release.
+
+Changes:
+
+* Use tomparse gem for parsing TomDoc.
+* Improve support for TomDoc features.
+
 
 ## 0.3.1 | 2011-11-10
 
@@ -47,3 +61,4 @@ Changes:
 * Depend on `tomdoc` library.
 * Support YARD's method return object.
 * Fix args issues when missing section.
+
