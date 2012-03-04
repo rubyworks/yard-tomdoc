@@ -1,10 +1,7 @@
-require File.expand_path(File.dirname(__FILE__)) + "/../helper.rb"
+require 'helper.rb'
 
 require "yard"
-#require "yard-tomdoc"
-
-# TODO: make separate test for this
-require "yard-tomdoc-intern"
+require "yard-tomdoc"
 
 describe YARD::Docstring do
 

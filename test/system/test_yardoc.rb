@@ -1,7 +1,7 @@
 dir = File.expand_path(File.dirname(__FILE__))
-tmp = dir + '/../../tmp'
+tmp = File.expand_path(dir + '/../../tmp')
 
-require dir + "/../helper.rb"
+require "helper"
 
 # This test is design to run `yard doc` on the sample project and
 # check to make sure it was produced successufully.
@@ -28,3 +28,4 @@ describe "yard doc" do
   end
 
 end
+

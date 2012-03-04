@@ -1,0 +1,11 @@
+Test.run :default do |run|
+  require 'spectroscope'
+  require 'ansi/diff'  # issue with assay-minitest
+  require 'assay-minitest'
+
+  $:.unshift 'lib'
+  $:.unshift 'test'
+
+  run.files << 'test/**/test_*.rb'
+end
+
