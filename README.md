@@ -1,11 +1,10 @@
-# yard-tomdoc
+# YARD::TomDoc
 
-| Author:    | Thomas Sawyer &lt;transfire@gmail.com&gt;      |
-|------------|------------------------------------------------|
-| Copyright: | (c) 2010 Loren Segal, Thomas Sawyer            |
-| Home:      | http://rubyworks.github.com/yard-tomdoc        |
-| Issues:    | http://github.com/rubyworks/yard-tomdoc/issues |
-| Status:    | [![Build Status](https://secure.travis-ci.org/rubyworks/yard-tomdoc.png)](http://travis-ci.org/rubyworks/yard-tomdoc) |
+[Website](http://rubyworks.github.com/yard-tomdoc) /
+[Development](http://github.com/rubyworks/yard-tomdoc) /
+[Issues](http://github.com/rubyworks/yard-tomdoc/issues)
+
+[![Build Status](https://secure.travis-ci.org/rubyworks/yard-tomdoc.png)](http://travis-ci.org/rubyworks/yard-tomdoc)
 
 
 ## Description
@@ -13,7 +12,7 @@
 Implements [TomDoc](http://tomdoc.org) syntax for YARD. 'Nuff said.
 
 
-## Usage
+## Instruction
 
 Since `yard-tomdoc` is a standard YARD plugin, utilize it with yard's
 `--plugin` option.
@@ -31,5 +30,7 @@ and TomDoc syntax [here](http://gnuu.org/2010/05/12/whats-missing-from-tomdoc/).
 
 Copyright (c) 2010 Loren Segal, Thomas Sawyer
 
-See the `NOTICE` file for license information on TomDoc.
+YARD::TomDoc is distributable in accordance with the ters of the **MIT** licsnse.
+
+See the `LICENSE.txt` file for details.
 
