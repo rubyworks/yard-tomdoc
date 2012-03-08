@@ -4,7 +4,7 @@
 
 This major release now uses tomparse gem for parsing TomDoc,
 instead of the tomdoc gem. This library only handles parsing
-and non of the other features than the tomdoc gem provides,
+and none of the other features than the tomdoc gem provides,
 so it is more suited to yard-tomdoc's needs. In addition,
 support for the latest TomDoc specification are included in
 this release.

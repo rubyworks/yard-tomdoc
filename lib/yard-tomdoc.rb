@@ -3,7 +3,9 @@ require 'tomparse'
 module YARD
 
   module TomDoc
-    #
+    # Metadata from the project's `yard-tomdoc.yml` fle.
+    # 
+    # Returns [Hash] of metadata.
     def self.metadata
       @metadata ||= (
         require 'yaml'
@@ -11,7 +13,11 @@ module YARD
       )
     end
 
+    # When a constant is missing, see if it is a metadata entry.
     #
+    # name - [Symbol] constant name
+    #
+    # Returns metadata value.
     def self.const_missing(name)
       metadata[name.to_s.downcase] || super(name)
     end
@@ -20,9 +26,9 @@ module YARD
   class Docstring
     # Parse comments with TomDoc and then provide YARD with results. 
     #
-    # comments - [Array] of comment strings.
+    # comments - [Array] comment strings
     #
-    # Returns parsed comments description [String].
+    # Returns [String] parsed comments description
     def parse_comments(comments)
       comment = [comments].flatten.join("\n")
 
@@ -39,7 +45,7 @@ module YARD
       end
 
       tomdoc.raises.each {|r| create_tag(:raise, r.sub(/\ARaises\s+/, '')) }
-#p tomdoc.returns
+
       tomdoc.returns.each do |r|
         if md = /\AReturns\s+([A-Z].*?)\s+/.match(r)
           klass = md[1]

@@ -1,34 +1,27 @@
 #!/usr/bin/env ruby
 
-name    "yard-tomdoc"
-version "0.4.0"
-title   "YARD TomDoc"
-summary "TomDoc for YARD"
+        name 'yard-tomdoc'
+     version '0.4.0'
+       title 'YARD TomDoc'
+     summary 'TomDoc for YARD'
 
-description "Use TomDoc documentation format with YARD."
+ description 'Use TomDoc documentation format with YARD.'
 
-authors [
-  'Trans <transfire@gmail.com>',
-  'Loren Segal'
-]
+     authors 'Trans <transfire@gmail.com>',
+             'Loren Segal'
 
-requirements [
-  'yard',
-  'tomparse',
-  'detroit        (build)',
-  'spectroscope   (test)',
-  'assay-minitest (test)'
-]
+requirements 'yard',
+             'tomparse',
+             'detroit        (build)',
+             'spectroscope   (test)',
+             'assay-minitest (test)'
 
-resources(
-  'home' => 'http://rubyworks.github.com/yard-tomdoc',
-  'code' => 'http://github.com/rubyworks/yard-tomdoc',
-  'bugs' => 'http://github.com/rubyworks/yard-tomdoc/issues',
-  'docs' => 'http://rubydoc.info/gems/yard-tomdoc/frames'
-)
+   resources 'home' => 'http://rubyworks.github.com/yard-tomdoc',
+             'code' => 'http://github.com/rubyworks/yard-tomdoc',
+             'bugs' => 'http://github.com/rubyworks/yard-tomdoc/issues',
+             'docs' => 'http://rubydoc.info/gems/yard-tomdoc/frames'
 
-copyrights [
-  '2012 Rubyworks   (MIT)',
-  '2010 Loren Segal (MIT)'
-]
+  copyrights '2012 Rubyworks   (MIT)',
+             '2010 Loren Segal (MIT)'
+
 
