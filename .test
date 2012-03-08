@@ -1,7 +1,6 @@
 Test.run :default do |run|
   require 'spectroscope'
-  require 'ansi/diff'  # issue with assay-minitest
-  require 'assay-minitest'
+  require 'ae'
 
   $:.unshift 'lib'
   $:.unshift 'test'

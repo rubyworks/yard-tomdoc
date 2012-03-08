@@ -12,9 +12,9 @@
 
 requirements 'yard',
              'tomparse',
-             'detroit        (build)',
-             'spectroscope   (test)',
-             'assay-minitest (test)'
+             'detroit      (build)',
+             'spectroscope (test)',
+             'ae           (test)'
 
    resources 'home' => 'http://rubyworks.github.com/yard-tomdoc',
              'code' => 'http://github.com/rubyworks/yard-tomdoc',

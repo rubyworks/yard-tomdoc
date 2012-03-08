@@ -23,26 +23,26 @@ eof
   end
 
   it "should fill docstring with description" do
-    @docstring.must_equal "Duplicate some text an arbitrary number of times."
+    @docstring.assert == "Duplicate some text an arbitrary number of times."
   end
 
   it "should fill param tags" do
     tags = @docstring.tags(:param)
-    tags.size.must_equal 2
-    tags[0].name.must_equal 'text'
-    tags[1].name.must_equal 'count'
+    tags.size.assert == 2
+    tags[0].name.assert == 'text'
+    tags[1].name.assert == 'count'
   end
   
   it "should fill examples tags" do
-    @docstring.tags(:example).size.must_equal 1
-    @docstring.tag(:example).text.must_equal "multiplex('Tom', 4)\n  # => 'TomTomTomTom'"
+    @docstring.tags(:example).size.assert == 1
+    @docstring.tag(:example).text.assert == "multiplex('Tom', 4)\n  # => 'TomTomTomTom'"
   end
   
   it "should fill return tag" do
-    @docstring.tag(:return).text.must_equal "the duplicated String."
+    @docstring.tag(:return).text.assert == "the duplicated String."
   end
 
   it "should fill raise tag" do
-    @docstring.tag(:raise).text.must_equal "ArgumentError if something bad happened"
+    @docstring.tag(:raise).text.assert == "ArgumentError if something bad happened"
   end
 end

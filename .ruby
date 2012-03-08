@@ -23,7 +23,7 @@ requirements:
   groups:
   - test
   development: true
-- name: assay-minitest
+- name: ae
   groups:
   - test
   development: true
