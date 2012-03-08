@@ -2,17 +2,27 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
-<title>Class: TomDoc::Arg</title>
-<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: TomDoc::Arg
+  
+    &mdash; YARD-TomDoc
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '..';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
 
   </head>
   <body>
@@ -33,11 +43,14 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
@@ -81,6 +94,8 @@
 
 
 
+
+
   <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
   <ul class="summary">
     
@@ -103,9 +118,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute description.</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -129,14 +142,14 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute name.</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
     
   </ul>
+
+
 
 
   
@@ -165,9 +178,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Create new Arg object.</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -188,9 +199,7 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>Is this an optional argument?.</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -211,50 +220,13 @@
 </p><div class="docstring">
   <div class="discussion">
     
-<p>Create new Arg object.</p>
+<p>A new instance of Arg</p>
 
 
   </div>
 </div>
 <div class="tags">
-  <h3>Parameters:</h3>
-<ul class="param">
   
-    <li>
-      
-        <span class='type'></span>
-      
-      
-        <span class='name'>name</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>name of argument</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='type'></span>
-      
-      
-        <span class='name'>description</span>
-      
-      
-        <em class="default">(defaults to: <tt>''</tt>)</em>
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>arguments description</p>
-</div>
-      
-    </li>
-  
-</ul>
 
 </div><table class="source_code">
   <tr>
@@ -270,11 +242,10 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/arg.rb', line 10</span>
 
-<span class='def def kw'>def</span> <span class='initialize identifier id'>initialize</span><span class='lparen token'>(</span><span class='name identifier id'>name</span><span class='comma token'>,</span> <span class='description identifier id'>description</span> <span class='assign token'>=</span> <span class='string val'>''</span><span class='rparen token'>)</span>
-  <span class='@name ivar id'>@name</span> <span class='assign token'>=</span> <span class='name identifier id'>name</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='dot token'>.</span><span class='intern identifier id'>intern</span>
-  <span class='@description ivar id'>@description</span> <span class='assign token'>=</span> <span class='description identifier id'>description</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@name</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_intern'>intern</span>
+  <span class='ivar'>@description</span> <span class='op'>=</span> <span class='id identifier rubyid_description'>description</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -295,35 +266,7 @@
   
 
   
-</p><div class="docstring">
-  <div class="discussion">
-    
-<p>Returns the value of attribute description</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <h3>Returns:</h3>
-<ul class="return">
-  
-    <li>
-      
-        <span class='type'></span>
-      
-      
-      
-      
-        
-        <div class='inline'>
-<p>the value of attribute description</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
+</p><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -336,10 +279,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/arg.rb', line 3</span>
 
-<span class='def def kw'>def</span> <span class='description identifier id'>description</span>
-  <span class='@description ivar id'>@description</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_description'>description</span>
+  <span class='ivar'>@description</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -355,35 +297,7 @@
   
 
   
-</p><div class="docstring">
-  <div class="discussion">
-    
-<p>Returns the value of attribute name</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  <h3>Returns:</h3>
-<ul class="return">
-  
-    <li>
-      
-        <span class='type'></span>
-      
-      
-      
-      
-        
-        <div class='inline'>
-<p>the value of attribute name</p>
-</div>
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
+</p><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -396,10 +310,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/arg.rb', line 3</span>
 
-<span class='def def kw'>def</span> <span class='name identifier id'>name</span>
-  <span class='@name ivar id'>@name</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_name'>name</span>
+  <span class='ivar'>@name</span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -422,26 +335,20 @@
 </p><div class="docstring">
   <div class="discussion">
     
-<p>Is this an optional argument?</p>
-
 
   </div>
 </div>
 <div class="tags">
-  <h3>Returns:</h3>
+  
+<h3>Returns:</h3>
 <ul class="return">
   
     <li>
       
+      
         <span class='type'>(<tt>Boolean</tt>)</span>
       
       
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>Boolean.</p>
-</div>
       
     </li>
   
@@ -460,10 +367,9 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/yard-tomdoc/arg.rb', line 18</span>
 
-<span class='def def kw'>def</span> <span class='optional? fid id'>optional?</span>
-  <span class='@description ivar id'>@description</span><span class='dot token'>.</span><span class='downcase identifier id'>downcase</span><span class='dot token'>.</span><span class='include? fid id'>include?</span> <span class='string val'>'optional'</span>
-<span class='end end kw'>end</span>
-</pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_optional?'>optional?</span>
+  <span class='ivar'>@description</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>optional</span><span class='tstring_end'>'</span></span>
+<span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -474,9 +380,9 @@
 </div>
     
     <div id="footer">
-  Generated on Wed Jun  8 14:38:13 2011 by 
+  Generated on Fri Feb  3 19:54:34 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.7 (ruby-1.8.7).
+  0.7.5 (ruby-1.9.3).
 </div>
 
   </body>

@@ -2,17 +2,27 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
-<title>File: README</title>
-<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: README
+  
+    &mdash; YARD-TomDoc
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
 
   </head>
   <body>
@@ -31,29 +41,38 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><div id='filecontents'><h1>yard-tomdoc</h1>
+    <div id="content"><div id='filecontents'><h1>YARD::TomDoc</h1>
+
+<p><a href="http://rubyworks.github.com/yard-tomdoc">Website</a> /
+<a href="http://github.com/rubyworks/yard-tomdoc">Development</a> /
+<a href="http://github.com/rubyworks/yard-tomdoc/issues">Issues</a></p>
+
+<p><a href="http://travis-ci.org/rubyworks/yard-tomdoc"><img src="https://secure.travis-ci.org/rubyworks/yard-tomdoc.png" alt="Build Status" /></a></p>
 
 <h2>Description</h2>
 
 <p>Implements <a href="http://tomdoc.org">TomDoc</a> syntax for YARD. 'Nuff said.</p>
 
-<h2>Usage</h2>
+<h2>Instruction</h2>
 
 <p>Since <code>yard-tomdoc</code> is a standard YARD plugin, utilize it with yard's
 <code>--plugin</code> option.</p>
 
-<pre class="code">$ <span class='yard identifier id'>yard</span> <span class='minus op'>-</span><span class='minus op'>-</span><span class='plugin identifier id'>plugin</span> <span class='yard identifier id'>yard</span><span class='minus op'>-</span><span class='tomdoc identifier id'>tomdoc</span> <span class='lbrack token'>[</span><span class='dot3 op'>...</span><span class='rbrack token'>]</span>
-</pre>
+<pre class="code ruby"><code>$ yard --plugin yard-tomdoc [...]
+</code></pre>
 
 <h2>Limitations</h2>
 
@@ -64,13 +83,15 @@ and TomDoc syntax <a href="http://gnuu.org/2010/05/12/whats-missing-from-tomdoc/
 
 <p>Copyright (c) 2010 Loren Segal, Thomas Sawyer</p>
 
-<p>See the <code>NOTICE</code> file for license information on TomDoc.</p>
+<p>YARD::TomDoc is distributable in accordance with the ters of the <strong>MIT</strong> licsnse.</p>
+
+<p>See the <code>LICENSE.txt</code> file for details.</p>
 </div></div>
     
     <div id="footer">
-  Generated on Wed Jun  8 14:38:13 2011 by 
+  Generated on Wed Mar  7 23:22:48 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.7 (ruby-1.8.7).
+  0.7.5 (ruby-1.9.3).
 </div>
 
   </body>

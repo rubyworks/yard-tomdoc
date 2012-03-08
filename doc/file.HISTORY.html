@@ -2,17 +2,27 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
-<title>File: HISTORY</title>
-<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
-<link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: HISTORY
+  
+    &mdash; YARD-TomDoc
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   relpath = '';
   if (relpath != '') relpath += '/';
 </script>
-<script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
 
   </head>
   <body>
@@ -31,17 +41,50 @@
 </div>
 
       <div id="search">
-  <a id="class_list_link" href="#">Class List</a>
-  <a id="method_list_link" href="#">Method List</a>
-  <a id ="file_list_link" href="#">File List</a>
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
 </div>
-
       <div class="clear"></div>
     </div>
     
     <iframe id="search_frame"></iframe>
     
     <div id="content"><div id='filecontents'><h1>RELEASE HISTORY</h1>
+
+<h2>0.4.0  2012-03-04</h2>
+
+<p>This major release now uses tomparse gem for parsing TomDoc,
+instead of the tomdoc gem. This library only handles parsing
+and none of the other features than the tomdoc gem provides,
+so it is more suited to yard-tomdoc's needs. In addition,
+support for the latest TomDoc specification are included in
+this release.</p>
+
+<p>Changes:</p>
+
+<ul>
+<li>Use tomparse gem for parsing TomDoc.</li>
+<li>Improve support for TomDoc features.</li>
+</ul>
+
+
+<h2>0.3.1 | 2011-11-10</h2>
+
+<p>This release simply modernizes the build configuration
+and adds an systems test. Functionally it has not changed.</p>
+
+<p>Changes:</p>
+
+<ul>
+<li>Modernize the build configuration.</li>
+<li>Add systems test and integrate Travis CI.</li>
+</ul>
+
 
 <h2>0.3.0 | 2011-06-08</h2>
 
@@ -88,9 +131,9 @@ depends on the <code>tomdoc</code> library.</p>
 </div></div>
     
     <div id="footer">
-  Generated on Wed Jun  8 14:38:13 2011 by 
+  Generated on Wed Mar  7 23:22:48 2012 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.6.7 (ruby-1.8.7).
+  0.7.5 (ruby-1.9.3).
 </div>
 
   </body>
