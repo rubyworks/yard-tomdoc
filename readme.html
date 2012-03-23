@@ -1,54 +1,44 @@
+<h1>YARD::TomDoc</h1>
 
-<h1>Yard Bird</h1>
+<p><a href="http://rubyworks.github.com/yard-tomdoc">Website</a> /
+<a href="http://github.com/rubyworks/yard-tomdoc">Development</a> /
+<a href="http://github.com/rubyworks/yard-tomdoc/issues">Issues</a></p>
 
-<p><em>“Sing sweet documentation in my ear.”</em></p>
+<p><a href="http://travis-ci.org/rubyworks/yard-tomdoc"><img src="https://secure.travis-ci.org/rubyworks/yard-tomdoc.png" alt="Build Status" /></a></p>
 
 <h2>Description</h2>
 
-<p>Yardbird is a YARD plugin that allows you, the developer, to customize your
-documentation parsing system.</p>
+<p>Implements <a href="http://tomdoc.org">TomDoc</a> syntax for YARD. 'Nuff said.</p>
 
-<h2>Resources</h2>
-<ul><li>
-<p>home: <a href="http://rubyworks.github.com">rubyworks.github.com</a>/</p>
-</li><li>
-<p>code: <a href="http://github.com/rubyworks">github.com/rubyworks</a>/</p>
-</li><li>
-<p>mail: <a
-href="http://groups.google.com/group/rubyworks-mailinglist">groups.google.com/group/rubyworks-mailinglist</a></p>
-</li></ul>
+<h2>Instruction</h2>
 
-<h2>Check It Out</h2>
+<p>Since <code>yard-tomdoc</code> is a standard YARD plugin, utilize it with yard's
+<code>--plugin</code> option.</p>
 
-<p>Sound like a chore? Until you see it allows you do this:</p>
+<pre><code>$ yard --plugin yard-tomdoc [...]
+</code></pre>
 
-<pre># .yard/name.song
+<h2>Documentation</h2>
 
-When /^Returns\s+/ do |matchdata, comment|
-  create_tag(:return, matchdata.post_match)
-end</pre>
+<h3>API</h3>
 
-<p>Now, whenever your documentation starts with ‘Returns ’, the remainder
-of the line will be added to YARD as a :return tag.</p>
+<ul>
+<li><a href="http://rubyworks.github.com/rebecca?doc=http://rubyworks/github.com/yard-tomdoc/docs/current.json">Rebecca</a></li>
+<li><a href="http://rubyworks.github.com/hypervisor?doc=http://rubyworks/github.com/yard-tomdoc/docs/current.json">Hypervisor</a></li>
+<li><a href="http://rubyworks.github.com/rubyfaux?doc=http://rubyworks/github.com/yard-tomdoc/docs/current.json">Rubyfaux</a></li>
+<li><a href="http://rdoc.info/gems/yard-tomdoc/frames">YARD</a></li>
+</ul>
 
-<p>Now we can get even crazier with an implementation of Tomdoc[].</p>
 
-<pre>require 'tomdoc/tomdoc'
+<h2>Limitations</h2>
 
-# God is /\A.*?\Z/
-When /\A.*?\Z/m do |matchdata, comments|
-  tomdoc = TomDoc::TomDoc.new(comments)
-  tomdoc.examples.each {|ex| create_tag(:example, &quot;\n&quot; + ex) }
-  tomdoc.args.each {|arg| create_tag(:param, &quot;#{arg.name} #{arg.description}&quot;) }
-  tomdoc.raises.each {|r| create_tag(:raise, r.sub(/\ARaises\s+/, '')) }
-  tomdoc.returns.each {|r| create_tag(:return, r.sub(/\AReturns\s+/, '')) }
-  tomdoc.description
-end</pre>
+<p>Before you use yard-tomdoc you should read about the differences between YARD
+and TomDoc syntax <a href="http://gnuu.org/2010/05/12/whats-missing-from-tomdoc/">here</a>.</p>
 
-<h2>Legal Bullshit</h2>
+<h2>Licensing</h2>
 
-<p>(MIT License)</p>
+<p>Copyright (c) 2010 Loren Segal, Thomas Sawyer</p>
 
-<p>Copyright © 2011 Thomas Sawyer</p>
+<p>YARD::TomDoc is distributable in accordance with the ters of the <strong>MIT</strong> licsnse.</p>
 
-<p>See NOTICE.rdoc file for more details.</p>
+<p>See the <code>LICENSE.txt</code> file for details.</p>
