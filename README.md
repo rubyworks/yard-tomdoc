@@ -20,6 +20,16 @@ Since `yard-tomdoc` is a standard YARD plugin, utilize it with yard's
     $ yard --plugin yard-tomdoc [...]
 
 
+## Documentation
+
+### API
+
+* [Rebecca](http://rubyworks.github.com/rebecca?doc=http://rubyworks/github.com/yard-tomdoc/docs/current.json)
+* [Hypervisor](http://rubyworks.github.com/hypervisor?doc=http://rubyworks/github.com/yard-tomdoc/docs/current.json)
+* [Rubyfaux](http://rubyworks.github.com/rubyfaux?doc=http://rubyworks/github.com/yard-tomdoc/docs/current.json)
+* [YARD](http://rdoc.info/gems/yard-tomdoc/frames)
+
+
 ## Limitations
 
 Before you use yard-tomdoc you should read about the differences between YARD
