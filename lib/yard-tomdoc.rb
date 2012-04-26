@@ -59,7 +59,7 @@ module YARD
 
       create_tag(:yield, tomdoc.yields) if tomdoc.yields
 
-      create_tag(:deprecated) if tomdoc.deprecated?
+      create_tag(:deprecated, tomdoc.description.to_s) if tomdoc.deprecated?
 
       create_tag(:private, tomdoc.description.to_s) if tomdoc.internal?
 

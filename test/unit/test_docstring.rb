@@ -54,4 +54,13 @@ eof
     end
 
   end
+
+  describe "Deprecated description" do
+
+    it "should fill deprecated tag" do
+      docstring = YARD::Docstring.new("# Deprecated: Don't use this.")
+      docstring.tag(:deprecated).text.assert == "Don't use this."
+    end
+
+  end
 end
