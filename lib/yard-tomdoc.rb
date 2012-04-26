@@ -61,7 +61,7 @@ module YARD
 
       create_tag(:deprecated) if tomdoc.deprecated?
 
-      create_tag(:private) if tomdoc.internal?
+      create_tag(:private, tomdoc.description.to_s) if tomdoc.internal?
 
       # notice we return the modified comment
       tomdoc.description.to_s
