@@ -45,4 +45,22 @@ eof
   it "should fill raise tag" do
     @docstring.tag(:raise).text.assert == "ArgumentError if something bad happened"
   end
+
+  describe "Internal description" do
+
+    it "should fill private tag" do
+      docstring = YARD::Docstring.new("# Internal: It will do a big things in future")
+      docstring.tag(:private).text.assert == "It will do a big things in future"
+    end
+
+  end
+
+  describe "Deprecated description" do
+
+    it "should fill deprecated tag" do
+      docstring = YARD::Docstring.new("# Deprecated: Don't use this.")
+      docstring.tag(:deprecated).text.assert == "Don't use this."
+    end
+
+  end
 end
