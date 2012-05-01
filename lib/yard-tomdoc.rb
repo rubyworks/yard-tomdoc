@@ -21,51 +21,94 @@ module YARD
     def self.const_missing(name)
       metadata[name.to_s.downcase] || super(name)
     end
-  end
 
-  class Docstring
     # Parse comments with TomDoc and then provide YARD with results. 
     #
-    # comments - [Array] comment strings
+    # yard    - [Docstring,DocstringParser] instance of yard object
+    # comment - [String] comment string
     #
-    # Returns [String] parsed comments description
-    def parse_comments(comments)
-      comment = [comments].flatten.join("\n")
-
+    # Returns [TomDoc] instance of TomDoc 
+    def self.yard_parse(yard, comment)
       tomdoc = TomParse.parse(comment)
 
-      tomdoc.examples.each {|ex| create_tag(:example, "\n" + ex) }
+      tomdoc.examples.each {|ex| yard.create_tag(:example, "\n" + ex) }
 
-      tomdoc.arguments.each {|arg| create_tag(:param, "#{arg.name} #{arg.description}") }
+      # TODO: how to figure-out class of argument ?
+      tomdoc.arguments.each {|arg| yard.create_tag(:param, "#{arg.name} #{arg.description}") }
 
       if last_argument = tomdoc.arguments.last
         last_argument.options.each do |opt|
-          create_tag(:option, "#{last_argument.name} #{opt.description}")
+          yard.create_tag(:option, "#{last_argument.name} #{opt.description}")
         end
       end
 
-      tomdoc.raises.each {|r| create_tag(:raise, r.sub(/\ARaises\s+/, '')) }
+      tomdoc.raises.each {|r| yard.create_tag(:raise, r.sub(/\ARaises\s+/, '')) }
 
       tomdoc.returns.each do |r|
+      # TODO: improve how we figure out class of argument
         if md = /\AReturns\s+([A-Z].*?)\s+/.match(r)
           klass = md[1]
           desc  = md.post_match
-          create_tag(:return, "[#{klass}] #{desc}")
+          yard.create_tag(:return, "[#{klass}] #{desc}")
         else
           desc = r.sub(/\AReturns\s+/, '')
-          create_tag(:return, desc)
+          yard.create_tag(:return, desc)
         end
       end
 
-      create_tag(:yield, tomdoc.yields) if tomdoc.yields
+      yard.create_tag(:yield, tomdoc.yields) if tomdoc.yields
 
-      create_tag(:deprecated, tomdoc.description.to_s) if tomdoc.deprecated?
+      yard.create_tag(:deprecated, 'Do not use this in new code, and replace it when updating old code.') if tomdoc.deprecated?
 
-      create_tag(:private, tomdoc.description.to_s) if tomdoc.internal?
+      yard.create_tag(:private, 'Intended for internal use only.') if tomdoc.internal?
 
-      # notice we return the modified comment
-      tomdoc.description.to_s
+      tomdoc
     end
+  end
+
+  if VERSION >= '0.8'
+
+    class DocstringParser
+      def parse(content, object = nil, handler = nil)
+        @object = object
+        @handler = handler
+        @raw_text = content
+
+        if object
+          text = parse_tomdoc(content)
+        else        
+          text = parse_content(content)
+        end
+
+        # Remove trailing/leading whitespace / newlines
+        @text = text.gsub(/\A[\r\n\s]+|[\r\n\s]+\Z/, '')
+        call_directives_after_parse
+        call_after_parse_callbacks
+
+        self
+      end
+
+      #
+      def parse_tomdoc(content)
+        tomdoc = TomDoc.yard_parse(self, content)
+        tomdoc.description.to_s
+      end
+
+      public :create_tag
+    end
+
+  else
+
+    class Docstring
+      def parse_comments(comments)
+        comment = [comments].flatten.join("\n")
+        tomdoc  = TomDoc.yard_parse(self, comment)
+        tomdoc.description.to_s  # return the modified comment
+      end
+
+      public :create_tag
+    end
+
   end
 
 end
