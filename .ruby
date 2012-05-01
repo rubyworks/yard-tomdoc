@@ -32,17 +32,26 @@ alternatives: []
 conflicts: []
 repositories: []
 resources:
-  home: http://rubyworks.github.com/yard-tomdoc
-  code: http://github.com/rubyworks/yard-tomdoc
-  bugs: http://github.com/rubyworks/yard-tomdoc/issues
-  docs: http://rubydoc.info/gems/yard-tomdoc/frames
+- uri: http://rubyworks.github.com/yard-tomdoc
+  name: home
+  type: home
+- uri: http://github.com/rubyworks/yard-tomdoc
+  name: code
+  type: code
+- uri: http://github.com/rubyworks/yard-tomdoc/issues
+  name: bugs
+  type: bugs
+- uri: http://rubydoc.info/gems/yard-tomdoc/frames
+  name: docs
+  type: doc
 extra: {}
 load_path:
 - lib
 revision: 0
 name: yard-tomdoc
 title: YARD TomDoc
-version: 0.4.0
+version: 0.5.0
 summary: TomDoc for YARD
 description: Use TomDoc documentation format with YARD.
-date: '2012-03-04'
+webcvs: https://github.com/rubyworks/yard-tomdoc/tree/master
+date: '2012-05-01'

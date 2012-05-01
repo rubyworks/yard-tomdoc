@@ -1,7 +1,8 @@
-.reap/digest
+.fire/digest
 .yardoc
 doc
 log
 pkg
 tmp
 web
+work/sandbox

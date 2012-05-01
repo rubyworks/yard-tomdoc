@@ -24,11 +24,11 @@ Since `yard-tomdoc` is a standard YARD plugin, utilize it with yard's
 
 ### API
 
-* Shomen 
+* Shomen -
   [Rebecca](http://rubyworks.github.com/rebecca?doc=http://rubyworks.github.com/yard-tomdoc/docs/current.json) /
   [Hypervisor](http://rubyworks.github.com/hypervisor?doc=http://rubyworks.github.com/yard-tomdoc/docs/current.json) /
   [Rubyfaux](http://rubyworks.github.com/rubyfaux?doc=http://rubyworks.github.com/yard-tomdoc/docs/current.json)
-* YARD [RubyDoc.info](http://rubydoc.info/gems/yard-tomdoc/frames)
+* YARD - [RubyDoc.info](http://rubydoc.info/gems/yard-tomdoc/frames)
 
 
 ## Limitations
