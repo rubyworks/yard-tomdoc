@@ -60,7 +60,8 @@ module YARD
 
       yard.create_tag(:deprecated, 'Do not use this in new code, and replace it when updating old code.') if tomdoc.deprecated?
 
-      yard.create_tag(:private, 'Intended for internal use only.') if tomdoc.internal?
+      yard.create_tag(:api, 'public')  if tomdoc.public?
+      yard.create_tag(:api, 'private') if tomdoc.internal?
 
       tomdoc
     end
