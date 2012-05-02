@@ -3,12 +3,18 @@ require 'helper.rb'
 require "yard"
 require "yard-tomdoc"
 
-if YARD::VERSION < '0.8'
-
 describe YARD::Docstring do
 
+  make_docstring = Proc.new do |comment|
+    if YARD::VERSION < '0.8'
+      YARD::Docstring.new(comment)
+    else
+      YARD::DocstringParser.new.parse(comment, self).to_docstring
+    end
+  end
+
   before do
-    @docstring = YARD::Docstring.new <<-eof
+    comment = <<-eof
 # Duplicate some text an arbitrary number of times.
 # 
 # text  - The String to be duplicated.
@@ -22,6 +28,8 @@ describe YARD::Docstring do
 #
 # Raises ArgumentError if something bad happened
 eof
+
+    @docstring = make_docstring[comment]
   end
 
   it "should fill docstring with description" do
@@ -34,7 +42,7 @@ eof
     tags[0].name.assert == 'text'
     tags[1].name.assert == 'count'
   end
-  
+
   it "should fill examples tags" do
     @docstring.tags(:example).size.assert == 1
     @docstring.tag(:example).text.assert == "multiplex('Tom', 4)\n  # => 'TomTomTomTom'"
@@ -50,9 +58,9 @@ eof
 
   describe "Internal description" do
 
-    it "should fill private tag" do
-      docstring = YARD::Docstring.new("# Internal: It will do a big things in future")
-      docstring.tag(:private).text.assert == "It will do a big things in future"
+    it "should fill api private tag" do
+      docstring = make_docstring["# Internal: It will do a big things in future"]
+      docstring.tag(:api).text.assert == "private"
     end
 
   end
@@ -60,11 +68,11 @@ eof
   describe "Deprecated description" do
 
     it "should fill deprecated tag" do
-      docstring = YARD::Docstring.new("# Deprecated: Don't use this.")
-      docstring.tag(:deprecated).text.assert == "Don't use this."
+      docstring = make_docstring["# Deprecated: Some description."]
+      docstring.tag(:deprecated).text.assert == "Do not use this in new code, and replace it when updating old code."
     end
 
   end
-end
 
 end
+
