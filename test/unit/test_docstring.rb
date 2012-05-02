@@ -3,6 +3,8 @@ require 'helper.rb'
 require "yard"
 require "yard-tomdoc"
 
+if YARD::VERSION < '0.8'
+
 describe YARD::Docstring do
 
   before do
@@ -63,4 +65,6 @@ eof
     end
 
   end
+end
+
 end
