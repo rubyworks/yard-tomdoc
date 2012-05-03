@@ -68,11 +68,11 @@ module YARD
   end
 
   if VERSION > '0.8'
-    require 'yard-tomdoc/yard09'
+    require 'yard-tomdoc/yard081'
   elsif VERSION == '0.8'
-    require 'yard-tomdoc/yard08'
+    require 'yard-tomdoc/yard080'
   else
-    require 'yard-tomdoc/yard07'
+    require 'yard-tomdoc/yard070'
   end
 
 end
