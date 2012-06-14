@@ -6,10 +6,10 @@ require "yard-tomdoc"
 describe YARD::Docstring do
 
   make_docstring = Proc.new do |comment|
-    if YARD::VERSION < '0.8'
-      YARD::Docstring.new(comment)
-    else
+    if YARD::VERSION == '0.8.0'
       YARD::DocstringParser.new.parse(comment, self).to_docstring
+    else
+      YARD::Docstring.new(comment)
     end
   end
 
@@ -45,7 +45,7 @@ eof
 
   it "should fill examples tags" do
     @docstring.tags(:example).size.assert == 1
-    @docstring.tag(:example).text.assert == "multiplex('Tom', 4)\n  # => 'TomTomTomTom'"
+    @docstring.tag(:example).text.assert == "multiplex('Tom', 4)\n# => 'TomTomTomTom'"
   end
   
   it "should fill return tag" do

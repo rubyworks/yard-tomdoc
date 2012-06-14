@@ -31,7 +31,8 @@ module YARD
     def self.yard_parse(yard, comment)
       tomdoc = TomParse.parse(comment)
 
-      tomdoc.examples.each {|ex| yard.create_tag(:example, "\n" + ex) }
+      # TODO: TomParse should make the `strip` unecessary
+      tomdoc.examples.each {|ex| yard.create_tag(:example, "\n" + ex.strip) }
 
       # TODO: how to figure-out class of argument ?
       tomdoc.arguments.each {|arg| yard.create_tag(:param, "#{arg.name} #{arg.description}") }
