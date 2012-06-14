@@ -1,6 +1,25 @@
 # RELEASE HISTORY
 
-## 0.4.0  2012-03-04
+## 0.5.0 / 2012-06-14
+
+Version 0.8.0 of YARD broke the yard-tomdoc plugin. After some discussion with
+Loren Segal, the developer of YARD, he decided that a new API was needed for
+plugins like yard-tomdoc. So YARD 0.8.1 was born. This release takes advantage
+of the new API. If you are using the latest and greated version of YARD, you 
+have to upgrade to yard-tomdoc 0.5+.
+
+Changes:
+
+* Improved support for YARD 0.8.1+.
+* Support multiple versions of YARD in a nice way.
+* Use @api private tag instead of @private for Internal status.
+* Add support for YARD version 0.8+.
+* Fixes for Internal and Deprecated marks.
+* Fix error for 'Deprecated' description
+* Fix Issue #3, Error for 'Internal' description.
+
+
+## 0.4.0 / 2012-03-04
 
 This major release now uses tomparse gem for parsing TomDoc,
 instead of the tomdoc gem. This library only handles parsing
