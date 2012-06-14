@@ -12,6 +12,7 @@
 
 requirements 'yard',
              'tomparse',
+             'rc',
              'detroit      (build)',
              'spectroscope (test)',
              'ae           (test)'
