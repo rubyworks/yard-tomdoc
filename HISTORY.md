@@ -5,8 +5,8 @@
 Version 0.8.0 of YARD broke the yard-tomdoc plugin. After some discussion with
 Loren Segal, the developer of YARD, he decided that a new API was needed for
 plugins like yard-tomdoc. So YARD 0.8.1 was born. This release takes advantage
-of the new API. If you are using the latest and greated version of YARD, you 
-have to upgrade to yard-tomdoc 0.5+.
+of the new API. If you are using the latest and greatest version of YARD, you 
+need to upgrade to yard-tomdoc 0.5+ too.
 
 Changes:
 
