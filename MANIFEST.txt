@@ -1,4 +1,7 @@
 #!mast bin lib test [A-Z]*.*
+lib/yard-tomdoc/yard070.rb
+lib/yard-tomdoc/yard080.rb
+lib/yard-tomdoc/yard081.rb
 lib/yard-tomdoc.rb
 lib/yard-tomdoc.yml
 test/helper.rb
@@ -9,3 +12,4 @@ test/unit/test_docstring.rb
 LICENSE.txt
 HISTORY.md
 README.md
+Config.rb
