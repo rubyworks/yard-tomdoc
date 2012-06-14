@@ -15,6 +15,7 @@ copyrights:
 requirements:
 - name: yard
 - name: tomparse
+- name: rc
 - name: detroit
   groups:
   - build
