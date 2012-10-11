@@ -37,9 +37,9 @@ module YARD
       # TODO: how to figure-out class of argument ?
       tomdoc.arguments.each {|arg| yard.create_tag(:param, "#{arg.name} #{arg.description}") }
 
-      if last_argument = tomdoc.arguments.last
-        last_argument.options.each do |opt|
-          yard.create_tag(:option, "#{last_argument.name} #{opt.description}")
+      tomdoc.arguments.each do |arg|
+        arg.options.each do |opt|
+          yard.create_tag(:option, "#{arg.name} #{opt.name} #{opt.description}")
         end
       end
 
