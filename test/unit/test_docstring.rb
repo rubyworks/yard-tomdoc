@@ -19,6 +19,9 @@ describe YARD::Docstring do
 # 
 # text  - The String to be duplicated.
 # count - The Integer number of times to duplicate the text.
+# options - Options (default: {})
+#         :a - Option a
+#         :b - Option b
 # 
 # Examples
 #   multiplex('Tom', 4)
@@ -38,9 +41,21 @@ eof
 
   it "should fill param tags" do
     tags = @docstring.tags(:param)
-    tags.size.assert == 2
+    tags.size.assert == 3
     tags[0].name.assert == 'text'
     tags[1].name.assert == 'count'
+    tags[2].name.assert == 'options'
+  end
+
+  it "should fill options tags" do
+    tags = @docstring.tags(:option)
+    tags.size.assert == 2
+    tags[0].name.assert == 'options'
+    tags[0].pair.name.assert == ':a'
+    tags[0].pair.text.assert == 'Option a'
+    tags[1].name.assert == 'options'
+    tags[1].pair.name.assert == ':b'
+    tags[1].pair.text.assert == 'Option b'
   end
 
   it "should fill examples tags" do
