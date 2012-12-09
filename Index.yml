@@ -1,0 +1,40 @@
+---
+version: '0.5.0'
+
+name:
+  yard-tomdoc
+
+title:
+  YARD TomDoc
+
+summary:
+  TomDoc for YARD
+
+description:
+  Use TomDoc documentation format with YARD.
+
+authors:
+  - Trans <transfire@gmail.com>
+  - Loren Segal
+
+requirements:
+  - yard
+  - tomparse
+  - rc
+  - detroit (build)
+  - spectroscope (test)
+  - ae (test)
+
+resources:
+  home: http://rubyworks.github.com/yard-tomdoc
+  code: http://github.com/rubyworks/yard-tomdoc
+  bugs: http://github.com/rubyworks/yard-tomdoc/issues
+  docs: http://rubydoc.info/gems/yard-tomdoc/frames
+
+copyrights:
+  - 2012 Rubyworks (MIT)
+  - 2010 Loren Segal (MIT)
+
+webcvs:
+  https://github.com/rubyworks/yard-tomdoc/tree/master
+
