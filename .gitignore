@@ -4,5 +4,4 @@ doc
 log
 tmp
 web
-work/sandbox
 *.lock
