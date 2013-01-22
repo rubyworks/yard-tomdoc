@@ -65,25 +65,25 @@ module YARD
       metadata[name.to_s.downcase] || super(name)
     end
 
+    # TODO: The #to_s on the gemspec return value is a bit too simplistic. But how to fix?
+    #       The goal is reduce the value to a basic type (String, Hash, Array, Numeric).
+
     # When a constant is missing, see if it is a metadata entry.
     # Metadata comes from the RubyGem, and fallsback to project index file.
     #
     # name - [Symbol] constant name
     #
-    # TODO: The #to_s on the gemspec return value is a bit too simplistic. But how to fix?
-    #       The goal is reduce the value to a basic type (String, Hash, Array, Numeric).
-    #
     # Returns metadata value.
     def self.const_missing(const_name)
       name = const_name.to_s.downcase
-      begin
-        Gem.loaded_specs[NAME].send(name).to_s
-      rescue StandardError
+      #begin
+      #  Gem.loaded_specs[NAME].send(name).to_s
+      #rescue StandardError
         index[name] || super(const_name)
-      end
+      #end
     end
 
-    # Metadata from the project's `yard-tomdoc.yml` index file.
+    # Metadata from the `yard-tomdoc.yml` or `.index` file.
     # 
     # Returns [Hash] of metadata.
     def self.index
