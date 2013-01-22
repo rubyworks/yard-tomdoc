@@ -10,7 +10,8 @@ authors:
 organizations: []
 requirements:
 - name: yard
-- name: tomparse
+- version: 0.3.0+
+  name: tomparse
 - name: rc
 - groups:
   - build
