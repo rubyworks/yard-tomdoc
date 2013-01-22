@@ -1,5 +1,18 @@
 # RELEASE HISTORY
 
+## 0.6.0 / 2013-01-22
+
+This new major release adds support for most YARD tags thanks to TomParse's
+new support of tag markers. It also fixes a few annoying bugs, such a
+options parsing and multi-line paragraph descriptions.
+
+Changes:
+
+* Add support for most YARD tags.
+* Fix support for option hashes.
+* Fix support for multi-paragraph descriptions.
+
+
 ## 0.5.0 / 2012-06-14
 
 Version 0.8.0 of YARD broke the yard-tomdoc plugin. After some discussion with
