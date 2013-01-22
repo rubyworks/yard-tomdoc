@@ -2,7 +2,7 @@
 revision: 2013
 type: ruby
 sources:
-- Index.yml
+- INDEX.yml
 authors:
 - name: Trans
   email: transfire@gmail.com
@@ -59,4 +59,4 @@ title: YARD TomDoc
 summary: TomDoc for YARD
 description: Use TomDoc documentation format with YARD.
 webcvs: https://github.com/rubyworks/yard-tomdoc/tree/master
-date: '2013-01-21'
+date: '2013-01-22'
