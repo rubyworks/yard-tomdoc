@@ -3,24 +3,7 @@ require 'tomparse'
 module YARD
 
   module TomDoc
-    # Metadata from the project's `yard-tomdoc.yml` fle.
-    # 
-    # Returns [Hash] of metadata.
-    def self.metadata
-      @metadata ||= (
-        require 'yaml'
-        YAML.load_file(File.dirname(__FILE__) + '/yard-tomdoc.yml')
-      )
-    end
-
-    # When a constant is missing, see if it is a metadata entry.
-    #
-    # name - [Symbol] constant name
-    #
-    # Returns metadata value.
-    def self.const_missing(name)
-      metadata[name.to_s.downcase] || super(name)
-    end
+    NAME = 'yard-tomdoc'
 
     # Parse comments with TomDoc and then provide YARD with results. 
     #
@@ -46,7 +29,7 @@ module YARD
       tomdoc.raises.each {|r| yard.create_tag(:raise, r.sub(/\ARaises\s+/, '')) }
 
       tomdoc.returns.each do |r|
-      # TODO: improve how we figure out class of argument
+        # TODO: improve how we figure out class of argument
         if md = /\AReturns\s+([A-Z].*?)\s+/.match(r)
           klass = md[1]
           desc  = md.post_match
@@ -66,6 +49,40 @@ module YARD
 
       tomdoc
     end
+
+    def self.const_missing(name)
+      metadata[name.to_s.downcase] || super(name)
+    end
+
+    # When a constant is missing, see if it is a metadata entry.
+    # Metadata comes from the RubyGem, and fallsback to project index file.
+    #
+    # name - [Symbol] constant name
+    #
+    # TODO: The #to_s on the gemspec return value is a bit too simplistic. But how to fix?
+    #       The goal is reduce the value to a basic type (String, Hash, Array, Numeric).
+    #
+    # Returns metadata value.
+    def self.const_missing(const_name)
+      name = const_name.to_s.downcase
+      begin
+        Gem.loaded_specs[NAME].send(name).to_s
+      rescue StandardError
+        index[name] || super(const_name)
+      end
+    end
+
+    # Metadata from the project's `yard-tomdoc.yml` index file.
+    # 
+    # Returns [Hash] of metadata.
+    def self.index
+      @index ||= (
+        require 'yaml'
+        dir  = File.dirname(__FILE__)
+        file = Dir[File.join(dir, "{#{NAME}.yml,../.index}")].first
+        file ? YAML.load_file(file) : {}
+      )
+    end
   end
 
   if VERSION > '0.8'
@@ -75,5 +92,4 @@ module YARD
   else
     require 'yard-tomdoc/yard070'
   end
-
 end
