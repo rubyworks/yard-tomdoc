@@ -1,6 +1,6 @@
 ---
-type: ruby
 revision: 2013
+type: ruby
 sources:
 - Index.yml
 authors:
@@ -41,8 +41,6 @@ resources:
   label: Documentation
 repositories: []
 categories: []
-load_path:
-- lib
 copyrights:
 - holder: Rubyworks
   year: '2012'
@@ -50,10 +48,14 @@ copyrights:
 - holder: Loren Segal
   year: '2010'
   license: MIT
+customs: []
+paths:
+  lib:
+  - lib
 version: 0.5.0
 name: yard-tomdoc
 title: YARD TomDoc
 summary: TomDoc for YARD
 description: Use TomDoc documentation format with YARD.
 webcvs: https://github.com/rubyworks/yard-tomdoc/tree/master
-date: '2012-12-09'
+date: '2013-01-21'
