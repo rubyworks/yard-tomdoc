@@ -3,7 +3,11 @@ require 'tomparse'
 module YARD
 
   module TomDoc
+    # Distribution name of this program.
     NAME = 'yard-tomdoc'
+
+    # Tags supported by YARD that Tomparse can handle.
+    TAGS = %w{abstract attr attr_reader attr_writer attribute author deprecated note see since todo version}
 
     # Parse comments with TomDoc and then provide YARD with results. 
     #
@@ -47,9 +51,16 @@ module YARD
       yard.create_tag(:api, 'public')  if tomdoc.public?
       yard.create_tag(:api, 'private') if tomdoc.internal?
 
+      tomdoc.tags.each do |label, desc|
+        if TAGS.include?(label.to_s)
+          yard.create_tag(label.to_sym, desc.to_s)
+        end
+      end
+
       tomdoc
     end
 
+    #
     def self.const_missing(name)
       metadata[name.to_s.downcase] || super(name)
     end
