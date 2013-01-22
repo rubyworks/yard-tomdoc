@@ -5,6 +5,7 @@
 [Issues](http://github.com/rubyworks/yard-tomdoc/issues)
 
 [![Build Status](https://secure.travis-ci.org/rubyworks/yard-tomdoc.png)](http://travis-ci.org/rubyworks/yard-tomdoc)
+[![Gem Version](https://badge.fury.io/rb/yard-tomdoc.png)](http://badge.fury.io/rb/yard-tomdoc) )
 
 
 ## Description
