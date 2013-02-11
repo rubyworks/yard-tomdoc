@@ -1,4 +1,4 @@
-# YARD::TomDoc
+# YARD TomDoc
 
 [Website](http://rubyworks.github.com/yard-tomdoc) /
 [Development](http://github.com/rubyworks/yard-tomdoc) /
@@ -23,13 +23,12 @@ Since `yard-tomdoc` is a standard YARD plugin, utilize it with yard's
 
 ## Documentation
 
-### API
-
-* Shomen -
-  [Rebecca](http://rubyworks.github.com/rebecca?doc=http://rubyworks.github.com/yard-tomdoc/docs/current.json) /
-  [Hypervisor](http://rubyworks.github.com/hypervisor?doc=http://rubyworks.github.com/yard-tomdoc/docs/current.json) /
-  [Rubyfaux](http://rubyworks.github.com/rubyfaux?doc=http://rubyworks.github.com/yard-tomdoc/docs/current.json)
-* YARD - [RubyDoc.info](http://rubydoc.info/gems/yard-tomdoc/frames)
+* API
+  * YARD - [RubyDoc.info](http://rubydoc.info/gems/yard-tomdoc/frames)
+  * Shomen - (out of date)
+    [Rebecca](http://rubyworks.github.com/rebecca?doc=http://rubyworks.github.com/yard-tomdoc/docs/current.json) /
+    [Hypervisor](http://rubyworks.github.com/hypervisor?doc=http://rubyworks.github.com/yard-tomdoc/docs/current.json) /
+    [Rubyfaux](http://rubyworks.github.com/rubyfaux?doc=http://rubyworks.github.com/yard-tomdoc/docs/current.json)
 
 
 ## Limitations
@@ -37,19 +36,27 @@ Since `yard-tomdoc` is a standard YARD plugin, utilize it with yard's
 Before you use yard-tomdoc you should read about the differences between YARD
 and TomDoc syntax [here](http://gnuu.org/2010/05/12/whats-missing-from-tomdoc/).
 
+Note that the YARD TomDoc plugin now supports a superset of TomDoc's syntax which
+provides additional YARD functionality via *cap-tags*. For example using 
+`Author: James Deam` in the documentation is equivalent to using `@author James Dean`
+in regular YARD syntax. Support is limited but it opens up much more of the YARD
+goodness to TomDoc users then the old blog post geiven above suggests.
+
 
 ## Acknowledgements
 
-Huge thanks to Loren Segal, the creator of YARD and the original author of this plugin.
-Without his patient assistance and coding genius, this library would not have been possible.
+Huge thanks to Loren Segal, the creator of YARD and the original author of this
+plugin. Without his patient assistance and coding genius, this library would not
+have been possible.
 
 
 ## Licensing
 
-Yard::TomDoc is copyrighted open-source software.
+YARD TomDoc is copyrighted open-source software.
 
 Copyright (c) 2010 Rubyworks. All rights reserved.
 
-YARD::TomDoc can be modified and redistributed in accordance with the ters of the **MIT** licsnse.
+YARD TomDoc can be modified and redistributed in accordance with the terms
+of the **MIT** licsnse.
 
 See the `LICENSE.txt` file for details.
