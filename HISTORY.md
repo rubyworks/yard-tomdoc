@@ -1,5 +1,17 @@
 # RELEASE HISTORY
 
+## 0.7.0 / 2013-02-12
+
+New major release uses the new major release of TomParse.
+So there you go. Oh, it improves class parsing for `Return`
+sections too. That's all.
+
+Changes:
+
+* Upgrade TomParse requirement to 0.4.0+.
+* Imporove class parsing for return tags.
+
+
 ## 0.6.0 / 2013-01-22
 
 This new major release adds support for most YARD tags thanks to TomParse's
