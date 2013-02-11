@@ -1,5 +1,5 @@
 ---
-version: '0.6.0'
+version: '0.7.0'
 
 name:
   yard-tomdoc
@@ -20,8 +20,8 @@ authors:
 requirements:
   - yard
   - tomparse 0.4.0+
-  - rc
   - detroit (build)
+  - dotopts (build test)
   - spectroscope (test)
   - ae (test)
 
