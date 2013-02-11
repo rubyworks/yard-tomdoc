@@ -1,0 +1,10 @@
+rubytest
+  -I lib;test
+  test/unit/test_*.rb
+
+[coverage]
+rubytest
+  $ simplecov=true
+  -I lib;test
+  test/unit/test_*.rb
+

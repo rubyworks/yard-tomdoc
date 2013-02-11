@@ -19,7 +19,7 @@ authors:
 
 requirements:
   - yard
-  - tomparse 0.3.0+
+  - tomparse 0.4.0+
   - rc
   - detroit (build)
   - spectroscope (test)
