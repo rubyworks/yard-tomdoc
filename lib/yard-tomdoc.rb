@@ -11,10 +11,12 @@ module YARD
 
     # Parse comments with TomDoc and then provide YARD with results. 
     #
-    # yard    - [Docstring,DocstringParser] instance of yard object
-    # comment - [String] comment string
+    # Arguments
     #
-    # Returns [TomDoc] instance of TomDoc 
+    #   yard    - [Docstring,DocstringParser] instance of yard object
+    #   comment - [String] comment string
+    #
+    # Returns instance of [TomDoc].
     def self.yard_parse(yard, comment)
       tomdoc = TomParse.parse(comment)
 
@@ -33,8 +35,15 @@ module YARD
       tomdoc.raises.each {|r| yard.create_tag(:raise, r.sub(/\ARaises\s+/, '')) }
 
       tomdoc.returns.each do |r|
-        # TODO: improve how we figure out class of argument
-        if md = /\AReturns\s+([A-Z].*?)\s+/.match(r)
+        if md = /\[(.*?)\]\Z/.match(r)
+          klass = md[1]
+          desc  = md.pre_match
+          yard.create_tag(:return, "[#{klass}] #{desc}")
+        elsif md = /\[(.*?)\]/.match(r)
+          klass = md[1]
+          desc  = r.sub("[#{md[1]}]", md[1])
+          yard.create_tag(:return, "[#{klass}] #{desc}")
+        elsif md = /\AReturns\s+([A-Z].*?)\s+/.match(r)
           klass = md[1]
           desc  = md.post_match
           yard.create_tag(:return, "[#{klass}] #{desc}")
@@ -51,9 +60,10 @@ module YARD
       yard.create_tag(:api, 'public')  if tomdoc.public?
       yard.create_tag(:api, 'private') if tomdoc.internal?
 
-      tomdoc.tags.each do |label, desc|
-        if TAGS.include?(label.to_s)
-          yard.create_tag(label.to_sym, desc.to_s)
+      tomdoc.tags.each do |(label, desc)|
+        tag = label.to_s.downcase
+        if TAGS.include?(tag)
+          yard.create_tag(tag.to_sym, desc.to_s)
         end
       end
 
@@ -65,27 +75,22 @@ module YARD
       metadata[name.to_s.downcase] || super(name)
     end
 
-    # TODO: The #to_s on the gemspec return value is a bit too simplistic. But how to fix?
-    #       The goal is reduce the value to a basic type (String, Hash, Array, Numeric).
-
     # When a constant is missing, see if it is a metadata entry.
     # Metadata comes from the RubyGem, and fallsback to project index file.
     #
-    # name - [Symbol] constant name
+    # Arguments
+    #
+    #   name - [Symbol] constant name
     #
     # Returns metadata value.
     def self.const_missing(const_name)
       name = const_name.to_s.downcase
-      #begin
-      #  Gem.loaded_specs[NAME].send(name).to_s
-      #rescue StandardError
-        index[name] || super(const_name)
-      #end
+      index[name] || super(const_name)
     end
 
     # Metadata from the `yard-tomdoc.yml` or `.index` file.
-    # 
-    # Returns [Hash] of metadata.
+    #
+    # Returns metadata. [Hash]
     def self.index
       @index ||= (
         require 'yaml'
