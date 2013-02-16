@@ -1,5 +1,18 @@
 # RELEASE HISTORY
 
+## 0.7.1 / 2013-02-16
+
+This release add support for "Returns nothing" being translated
+into `@return [void]`. And adds support for putting the return
+type at the end of the description if no other return clauses are
+specificed. This is especially useful for attributes.
+
+Changes:
+
+* Add support for returns nothing.
+* Add support for description only return type.
+
+
 ## 0.7.0 / 2013-02-12
 
 New major release uses the new major release of TomParse.

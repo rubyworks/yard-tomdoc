@@ -1,5 +1,5 @@
 rubytest
-  -I lib;test
+  -I lib:test
   test/unit/test_*.rb
 
 [coverage]
