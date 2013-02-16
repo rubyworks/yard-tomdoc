@@ -57,10 +57,10 @@ customs: []
 paths:
   lib:
   - lib
-version: 0.7.0
+version: 0.7.1
 name: yard-tomdoc
 title: YARD TomDoc
 summary: TomDoc for YARD
 description: Use TomDoc documentation format with YARD.
 webcvs: https://github.com/rubyworks/yard-tomdoc/tree/master
-date: '2013-02-11'
+date: '2013-02-14'
