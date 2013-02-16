@@ -18,7 +18,7 @@ Implements [TomDoc](http://tomdoc.org) syntax for YARD. 'Nuff said.
 Since `yard-tomdoc` is a standard YARD plugin, utilize it with yard's
 `--plugin` option.
 
-    $ yard --plugin yard-tomdoc [...]
+    $ yard --plugin tomdoc [...]
 
 
 ## Documentation
