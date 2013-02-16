@@ -3,7 +3,6 @@ language: ruby
 script: "bundle exec rubytest -Ilib -Itest test/unit/"
 rvm:
   - 1.9.3
-  - rbx
   - rbx-19mode
   - jruby
   - jruby-19mode
