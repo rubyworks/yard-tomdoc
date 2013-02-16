@@ -34,8 +34,17 @@ module YARD
 
       tomdoc.raises.each {|r| yard.create_tag(:raise, r.sub(/\ARaises\s+/, '')) }
 
+      if tomdoc.returns.empty?
+        if md = /\[(.*?)\]\s*\Z/.match(tomdoc.description)
+          klass = md[1]
+          yard.create_tag(:return, "[#{klass}]")
+        end
+      end
+
       tomdoc.returns.each do |r|
-        if md = /\[(.*?)\]\Z/.match(r)
+        if md = /\AReturn(s)?\ nothing(\.)?\Z/.match(r)
+          yard.create_tag(:return, "[void]")
+        elsif md = /\[(.*?)\]\Z/.match(r)
           klass = md[1]
           desc  = md.pre_match
           yard.create_tag(:return, "[#{klass}] #{desc}")
