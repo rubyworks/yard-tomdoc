@@ -1,10 +1,12 @@
 rubytest
-  -I lib:test
+  -I lib
+  -I test
   test/unit/test_*.rb
 
 [coverage]
 rubytest
   $ simplecov=true
-  -I lib;test
+  -I lib
+  -I test
   test/unit/test_*.rb
 
