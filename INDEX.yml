@@ -21,7 +21,8 @@ requirements:
   - yard
   - tomparse 0.4.0+
   - detroit (build)
-  - dotopts (build test)
+  - ergo (build)
+  - rubytest-cli (test)
   - spectroscope (test)
   - ae (test)
 

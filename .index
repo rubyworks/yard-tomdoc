@@ -18,9 +18,12 @@ requirements:
   name: detroit
 - groups:
   - build
+  development: true
+  name: ergo
+- groups:
   - test
   development: true
-  name: dotopts
+  name: rubytest-cli
 - groups:
   - test
   development: true
@@ -63,4 +66,4 @@ title: YARD TomDoc
 summary: TomDoc for YARD
 description: Use TomDoc documentation format with YARD.
 webcvs: https://github.com/rubyworks/yard-tomdoc/tree/master
-date: '2013-02-16'
+date: '2013-03-02'
