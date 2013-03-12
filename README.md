@@ -1,11 +1,13 @@
 # YARD TomDoc
 
 [Website](http://rubyworks.github.com/yard-tomdoc) /
-[Development](http://github.com/rubyworks/yard-tomdoc) /
-[Issues](http://github.com/rubyworks/yard-tomdoc/issues)
+[Documentation](http://rubydoc.info/gems/yard-tomdoc/frames) /
+[Issues](http://github.com/rubyworks/yard-tomdoc/issues) /
+[Source Code](http://github.com/rubyworks/yard-tomdoc)
 
-[![Build Status](https://secure.travis-ci.org/rubyworks/yard-tomdoc.png)](http://travis-ci.org/rubyworks/yard-tomdoc)
 [![Gem Version](https://badge.fury.io/rb/yard-tomdoc.png)](http://badge.fury.io/rb/yard-tomdoc)
+[![Build Status](https://secure.travis-ci.org/rubyworks/yard-tomdoc.png)](http://travis-ci.org/rubyworks/yard-tomdoc) &nbsp; &nbsp;
+[![Flattr Me](http://api.flattr.com/button/flattr-badge-large.png)](http://flattr.com/thing/324911/Rubyworks-Ruby-Development-Fund)
 
 
 ## Description
@@ -21,26 +23,15 @@ Since `yard-tomdoc` is a standard YARD plugin, utilize it with yard's
     $ yard --plugin tomdoc [...]
 
 
-## Documentation
-
-* API
-  * YARD - [RubyDoc.info](http://rubydoc.info/gems/yard-tomdoc/frames)
-  * Shomen - (out of date)
-    [Rebecca](http://rubyworks.github.com/rebecca?doc=http://rubyworks.github.com/yard-tomdoc/docs/current.json) /
-    [Hypervisor](http://rubyworks.github.com/hypervisor?doc=http://rubyworks.github.com/yard-tomdoc/docs/current.json) /
-    [Rubyfaux](http://rubyworks.github.com/rubyfaux?doc=http://rubyworks.github.com/yard-tomdoc/docs/current.json)
-
-
 ## Limitations
 
-Before you use yard-tomdoc you should read about the differences between YARD
-and TomDoc syntax [here](http://gnuu.org/2010/05/12/whats-missing-from-tomdoc/).
-
-Note that the YARD TomDoc plugin now supports a superset of TomDoc's syntax which
-provides additional YARD functionality via *cap-tags*. For example using 
-`Author: James Deam` in the documentation is equivalent to using `@author James Dean`
-in regular YARD syntax. Support is limited but it opens up much more of the YARD
-goodness to TomDoc users then the old blog post geiven above suggests.
+Before you use yard-tomdoc you should read [Loren Segal's blog post](http://gnuu.org/2010/05/12/whats-missing-from-tomdoc/)
+about the differences between YARD and TomDoc syntax. But note that the YARD
+TomDoc plugin now supports a superset of TomDoc's syntax which provides additional
+YARD functionality via *cap-tags*. For example using `Author: James Deam` in the
+documentation is equivalent to using `@author James Dean` in regular YARD syntax.
+Support is limited, but it opens up much more of YARD's goodness to TomDoc
+users then Loren's blog post suggests.
 
 
 ## Acknowledgements
