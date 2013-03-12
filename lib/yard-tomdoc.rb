@@ -79,11 +79,6 @@ module YARD
       tomdoc
     end
 
-    #
-    def self.const_missing(name)
-      metadata[name.to_s.downcase] || super(name)
-    end
-
     # When a constant is missing, see if it is a metadata entry.
     # Metadata comes from the RubyGem, and fallsback to project index file.
     #
